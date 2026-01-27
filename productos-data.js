@@ -5,11 +5,11 @@ const PRODUCTOS = [
     id: 1,
     nombre: "CORINTHIANS",
     precio: 45000,
-    imgNormal: "Imagenes/Corinthians.png",
-    imgHover: "Imagenes/Corinthians2.png",
+    imgNormal: "imagenes/Corinthians.png",
+    imgHover: "imagenes/Corinthians2.png",
     imagenes: [
-      "Imagenes/Corinthians.png",
-      "Imagenes/Corinthians2.png"
+      "imagenes/Corinthians.png",
+      "imagenes/Corinthians2.png"
     ],
     descripcion: [
       "Diseño brasileño auténtico",
@@ -24,11 +24,11 @@ const PRODUCTOS = [
     id: 2,
     nombre: "LIVERPOOL",
     precio: 45000,
-    imgNormal: "Imagenes/Liverpool.png",
-    imgHover: "Imagenes/Liverpool2.png",
+    imgNormal: "imagenes/Liverpool.png",
+    imgHover: "imagenes/Liverpool2.png",
     imagenes: [
-      "Imagenes/Liverpool.png",
-      "Imagenes/Liverpool2.png"
+      "imagenes/Liverpool.png",
+      "imagenes/Liverpool2.png"
     ],
     descripcion: [
       "Estilo clásico inglés",
@@ -43,11 +43,11 @@ const PRODUCTOS = [
     id: 3,
     nombre: "ALEMANIA",
     precio: 45000,
-    imgNormal: "Imagenes/Alemania.png",
-    imgHover: "Imagenes/Alemania2.png",
+    imgNormal: "imagenes/Alemania.png",
+    imgHover: "imagenes/Alemania2.png",
     imagenes: [
-      "Imagenes/Alemania.png",
-      "Imagenes/Alemania2.png"
+      "imagenes/Alemania.png",
+      "imagenes/Alemania2.png"
     ],
     descripcion: [
       "Corte moderno",
@@ -62,11 +62,11 @@ const PRODUCTOS = [
     id: 4,
     nombre: "MANCHESTER CITY",
     precio: 45000,
-    imgNormal: "Imagenes/Manchestercity.png",
-    imgHover: "Imagenes/Manchestercity2.png",
+    imgNormal: "imagenes/Manchestercity.png",
+    imgHover: "imagenes/Manchestercity2.png",
     imagenes: [
-      "Imagenes/Manchestercity.png",
-      "Imagenes/Manchestercity2.png"
+      "imagenes/Manchestercity.png",
+      "imagenes/Manchestercity2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -81,11 +81,11 @@ const PRODUCTOS = [
     id: 5,
     nombre: "MANCHESTER UNITED",
     precio: 45000,
-    imgNormal: "Imagenes/Manchesterunited.png",
-    imgHover: "Imagenes/Manchesterunited2.png",
+    imgNormal: "imagenes/Manchesterunited.png",
+    imgHover: "imagenes/Manchesterunited2.png",
     imagenes: [
-      "Imagenes/Manchesterunited.png",
-      "Imagenes/Manchesterunited2.png"
+      "imagenes/Manchesterunited.png",
+      "imagenes/Manchesterunited2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -100,11 +100,11 @@ const PRODUCTOS = [
     id: 6,
     nombre: "AJAX",
     precio: 45000,
-    imgNormal: "Imagenes/Ajax.png",
-    imgHover: "Imagenes/Ajax2.png",
+    imgNormal: "imagenes/Ajax.png",
+    imgHover: "imagenes/Ajax2.png",
     imagenes: [
-      "Imagenes/Ajax.png",
-      "Imagenes/Ajax2.png"
+      "imagenes/Ajax.png",
+      "imagenes/Ajax2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -119,11 +119,11 @@ const PRODUCTOS = [
     id: 7,
     nombre: "BARCELONA",
     precio: 45000,
-    imgNormal: "Imagenes/Barcelona.png",
-    imgHover: "Imagenes/Barcelona2.png",
+    imgNormal: "imagenes/Barcelona.png",
+    imgHover: "imagenes/Barcelona2.png",
     imagenes: [
-      "Imagenes/Barcelona.png",
-      "Imagenes/Barcelona2.png"
+      "imagenes/Barcelona.png",
+      "imagenes/Barcelona2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -138,11 +138,11 @@ const PRODUCTOS = [
     id: 8,
     nombre: "BAYERN MUNICH",
     precio: 45000,
-    imgNormal: "Imagenes/Bayern.png",
-    imgHover: "Imagenes/Bayern2.png",
+    imgNormal: "imagenes/Bayern.png",
+    imgHover: "imagenes/Bayern2.png",
     imagenes: [
-      "Imagenes/Bayern.png",
-      "Imagenes/Bayern2.png"
+      "imagenes/Bayern.png",
+      "imagenes/Bayern2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -157,11 +157,11 @@ const PRODUCTOS = [
     id: 9,
     nombre: "BOCA JUNIORS",
     precio: 45000,
-    imgNormal: "Imagenes/Boca.png",
-    imgHover: "Imagenes/Boca2.png",
+    imgNormal: "imagenes/Boca.png",
+    imgHover: "imagenes/Boca2.png",
     imagenes: [
-      "Imagenes/Boca.png",
-      "Imagenes/Boca2.png"
+      "imagenes/Boca.png",
+      "imagenes/Boca2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -176,11 +176,11 @@ const PRODUCTOS = [
     id: 10,
     nombre: "MANCHESTER CITY",
     precio: 45000,
-    imgNormal: "Imagenes/Manchestercityvisitante.png",
-    imgHover: "Imagenes/Manchestercityvisitante2.png",
+    imgNormal: "imagenes/Manchestercityvisitante.png",
+    imgHover: "imagenes/Manchestercityvisitante2.png",
     imagenes: [
-      "Imagenes/Manchestercityvisitante.png",
-      "Imagenes/Manchestercityvisitante2.png"
+      "imagenes/Manchestercityvisitante.png",
+      "imagenes/Manchestercityvisitante2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -195,11 +195,11 @@ const PRODUCTOS = [
     id: 11,
     nombre: "JUVENTUS",
     precio: 45000,
-    imgNormal: "Imagenes/Juventus.png",
-    imgHover: "Imagenes/Juventus2.png",
+    imgNormal: "imagenes/Juventus.png",
+    imgHover: "imagenes/Juventus2.png",
     imagenes: [
-      "Imagenes/Juventus.png",
-      "Imagenes/Juventus2.png"
+      "imagenes/Juventus.png",
+      "imagenes/Juventus2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -214,11 +214,11 @@ const PRODUCTOS = [
     id: 12,
     nombre: "BORUSIA DORMUNT",
     precio: 45000,
-    imgNormal: "Imagenes/Borusia.png",
-    imgHover: "Imagenes/Borusia2.png",
+    imgNormal: "imagenes/Borusia.png",
+    imgHover: "imagenes/Borusia2.png",
     imagenes: [
-      "Imagenes/Borusia.png",
-      "Imagenes/Borusia2.png"
+      "imagenes/Borusia.png",
+      "imagenes/Borusia2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -233,11 +233,11 @@ const PRODUCTOS = [
     id: 13,
     nombre: "ATLETICO MINEIRO",
     precio: 45000,
-    imgNormal: "Imagenes/Mineiro.png",
-    imgHover: "Imagenes/Mineiro2.png",
+    imgNormal: "imagenes/Mineiro.png",
+    imgHover: "imagenes/Mineiro2.png",
     imagenes: [
-      "Imagenes/Mineiro.png",
-      "Imagenes/Mineiro2.png"
+      "imagenes/Mineiro.png",
+      "imagenes/Mineiro2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -252,11 +252,11 @@ const PRODUCTOS = [
     id: 14,
     nombre: "INTER DE MILAN",
     precio: 45000,
-    imgNormal: "Imagenes/Inter.png",
-    imgHover: "Imagenes/Inter2.png",
+    imgNormal: "imagenes/Inter.png",
+    imgHover: "imagenes/Inter2.png",
     imagenes: [
-      "Imagenes/Inter.png",
-      "Imagenes/Inter2.png"
+      "imagenes/Inter.png",
+      "imagenes/Inter2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -271,11 +271,11 @@ const PRODUCTOS = [
     id: 15,
     nombre: "JUVENTUS",
     precio: 45000,
-    imgNormal: "Imagenes/Juventusantes.png",
-    imgHover: "Imagenes/Juventusantes2.png",
+    imgNormal: "imagenes/Juventusantes.png",
+    imgHover: "imagenes/Juventusantes2.png",
     imagenes: [
-      "Imagenes/Juventusantes.png",
-      "Imagenes/Juventusantes2.png"
+      "imagenes/Juventusantes.png",
+      "imagenes/Juventusantes2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -290,11 +290,11 @@ const PRODUCTOS = [
     id: 16,
     nombre: "LIVERPOOL",
     precio: 45000,
-    imgNormal: "Imagenes/Liverpoolotra.png",
-    imgHover: "Imagenes/Liverpoolotra2.png",
+    imgNormal: "imagenes/Liverpoolotra.png",
+    imgHover: "imagenes/Liverpoolotra2.png",
     imagenes: [
-      "Imagenes/Liverpoolotra.png",
-      "Imagenes/Liverpoolotra2.png"
+      "imagenes/Liverpoolotra.png",
+      "imagenes/Liverpoolotra2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -309,11 +309,11 @@ const PRODUCTOS = [
     id: 17,
     nombre: "BAYERN MUNICH",
     precio: 45000,
-    imgNormal: "Imagenes/Bayernotra.png",
-    imgHover: "Imagenes/Bayernotra2.png",
+    imgNormal: "imagenes/Bayernotra.png",
+    imgHover: "imagenes/Bayernotra2.png",
     imagenes: [
-      "Imagenes/Bayernotra.png",
-      "Imagenes/Bayernotra2.png"
+      "imagenes/Bayernotra.png",
+      "imagenes/Bayernotra2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -328,11 +328,11 @@ const PRODUCTOS = [
     id: 18,
     nombre: "BOCA JUNIORS",
     precio: 45000,
-    imgNormal: "Imagenes/Bocaotra.png",
-    imgHover: "Imagenes/Bocaotra2.png",
+    imgNormal: "imagenes/Bocaotra.png",
+    imgHover: "imagenes/Bocaotra2.png",
     imagenes: [
-      "Imagenes/Bocaotra.png",
-      "Imagenes/Bocaotra2.png"
+      "imagenes/Bocaotra.png",
+      "imagenes/Bocaotra2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -347,11 +347,11 @@ const PRODUCTOS = [
     id: 19,
     nombre: "RIVER PLATE",
     precio: 45000,
-    imgNormal: "Imagenes/River.png",
-    imgHover: "Imagenes/River2.png",
+    imgNormal: "imagenes/River.png",
+    imgHover: "imagenes/River2.png",
     imagenes: [
-      "Imagenes/River.png",
-      "Imagenes/River2.png"
+      "imagenes/River.png",
+      "imagenes/River2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -366,11 +366,11 @@ const PRODUCTOS = [
     id: 20,
     nombre: "MANCHESTER UNITED",
     precio: 45000,
-    imgNormal: "Imagenes/Manchesterunitedotra.png",
-    imgHover: "Imagenes/Manchesterunitedotra2.png",
+    imgNormal: "imagenes/Manchesterunitedotra.png",
+    imgHover: "imagenes/Manchesterunitedotra2.png",
     imagenes: [
-      "Imagenes/Manchesterunitedotra.png",
-      "Imagenes/Manchesterunitedotra2.png"
+      "imagenes/Manchesterunitedotra.png",
+      "imagenes/Manchesterunitedotra2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -385,11 +385,11 @@ const PRODUCTOS = [
     id: 21,
     nombre: "PSG",
     precio: 45000,
-    imgNormal: "Imagenes/Psg.png",
-    imgHover: "Imagenes/Psg2.png",
+    imgNormal: "imagenes/Psg.png",
+    imgHover: "imagenes/Psg2.png",
     imagenes: [
-      "Imagenes/Psg.png",
-      "Imagenes/Psg2.png"
+      "imagenes/Psg.png",
+      "imagenes/Psg2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -404,11 +404,11 @@ const PRODUCTOS = [
     id: 22,
     nombre: "NAPOLI",
     precio: 45000,
-    imgNormal: "Imagenes/Napoli.png",
-    imgHover: "Imagenes/Napoli2.png",
+    imgNormal: "imagenes/Napoli.png",
+    imgHover: "imagenes/Napoli2.png",
     imagenes: [
-      "Imagenes/Napoli.png",
-      "Imagenes/Napoli2.png"
+      "imagenes/Napoli.png",
+      "imagenes/Napoli2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -423,11 +423,11 @@ const PRODUCTOS = [
     id: 23,
     nombre: "LIVERPOOL",
     precio: 45000,
-    imgNormal: "Imagenes/Liverpoolvisitante.png",
-    imgHover: "Imagenes/Liverpoolvisitante2.png",
+    imgNormal: "imagenes/Liverpoolvisitante.png",
+    imgHover: "imagenes/Liverpoolvisitante2.png",
     imagenes: [
-      "Imagenes/Liverpoolvisitante.png",
-      "Imagenes/Liverpoolvisitante2.png"
+      "imagenes/Liverpoolvisitante.png",
+      "imagenes/Liverpoolvisitante2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -442,11 +442,11 @@ const PRODUCTOS = [
     id: 24,
     nombre: "PORTUGAL",
     precio: 45000,
-    imgNormal: "Imagenes/Portugal.png",
-    imgHover: "Imagenes/Portugal2.png",
+    imgNormal: "imagenes/Portugal.png",
+    imgHover: "imagenes/Portugal2.png",
     imagenes: [
-      "Imagenes/Portugal.png",
-      "Imagenes/Portugal2.png"
+      "imagenes/Portugal.png",
+      "imagenes/Portugal2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -461,11 +461,11 @@ const PRODUCTOS = [
     id: 25,
     nombre: "MANCHESTER CITY",
     precio: 45000,
-    imgNormal: "Imagenes/Manchestercityotra.png",
-    imgHover: "Imagenes/Manchestercityotra2.png",
+    imgNormal: "imagenes/Manchestercityotra.png",
+    imgHover: "imagenes/Manchestercityotra2.png",
     imagenes: [
-      "Imagenes/Manchestercityotra.png",
-      "Imagenes/Manchestercityotra2.png"
+      "imagenes/Manchestercityotra.png",
+      "imagenes/Manchestercityotra2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -480,11 +480,11 @@ const PRODUCTOS = [
     id: 26,
     nombre: "BOCA JUNIORS",
     precio: 45000,
-    imgNormal: "Imagenes/Bocajr.png",
-    imgHover: "Imagenes/Bocajr2.png",
+    imgNormal: "imagenes/Bocajr.png",
+    imgHover: "imagenes/Bocajr2.png",
     imagenes: [
-      "Imagenes/Bocajr.png",
-      "Imagenes/Bocajr2.png"
+      "imagenes/Bocajr.png",
+      "imagenes/Bocajr2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -499,11 +499,11 @@ const PRODUCTOS = [
     id: 27,
     nombre: "REAL MADRID",
     precio: 45000,
-    imgNormal: "Imagenes/Real.png",
-    imgHover: "Imagenes/Real2.png",
+    imgNormal: "imagenes/Real.png",
+    imgHover: "imagenes/Real2.png",
     imagenes: [
-      "Imagenes/Real.png",
-      "Imagenes/Real2.png"
+      "imagenes/Real.png",
+      "imagenes/Real2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -518,11 +518,11 @@ const PRODUCTOS = [
     id: 28,
     nombre: "JUVENTUS",
     precio: 45000,
-    imgNormal: "Imagenes/Juve.png",
-    imgHover: "Imagenes/Juve2.png",
+    imgNormal: "imagenes/Juve.png",
+    imgHover: "imagenes/Juve2.png",
     imagenes: [
-      "Imagenes/Juve.png",
-      "Imagenes/Juve2.png"
+      "imagenes/Juve.png",
+      "imagenes/Juve2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -537,11 +537,11 @@ const PRODUCTOS = [
     id: 29,
     nombre: "NAPOLI",
     precio: 45000,
-    imgNormal: "Imagenes/Napoliotra.png",
-    imgHover: "Imagenes/Napoliotra2.png",
+    imgNormal: "imagenes/Napoliotra.png",
+    imgHover: "imagenes/Napoliotra2.png",
     imagenes: [
-      "Imagenes/Napoliotra.png",
-      "Imagenes/Napoliotra2.png"
+      "imagenes/Napoliotra.png",
+      "imagenes/Napoliotra2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -556,11 +556,11 @@ const PRODUCTOS = [
     id: 30,
     nombre: "ARSENAL",
     precio: 45000,
-    imgNormal: "Imagenes/Arsenal.png",
-    imgHover: "Imagenes/Arsenal2.png",
+    imgNormal: "imagenes/Arsenal.png",
+    imgHover: "imagenes/Arsenal2.png",
     imagenes: [
-      "Imagenes/Arsenal.png",
-      "Imagenes/Arsenal2.png"
+      "imagenes/Arsenal.png",
+      "imagenes/Arsenal2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -575,11 +575,11 @@ const PRODUCTOS = [
     id: 31,
     nombre: "JUVENTUS",
     precio: 45000,
-    imgNormal: "Imagenes/Juventusotra.png",
-    imgHover: "Imagenes/Juventusotra2.png",
+    imgNormal: "imagenes/Juventusotra.png",
+    imgHover: "imagenes/Juventusotra2.png",
     imagenes: [
-      "Imagenes/Juventusotra.png",
-      "Imagenes/Juventusotra2.png"
+      "imagenes/Juventusotra.png",
+      "imagenes/Juventusotra2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -594,11 +594,11 @@ const PRODUCTOS = [
     id: 32,
     nombre: "FLAMENGO",
     precio: 45000,
-    imgNormal: "Imagenes/Flamengo.png",
-    imgHover: "Imagenes/Flamengo2.png",
+    imgNormal: "imagenes/Flamengo.png",
+    imgHover: "imagenes/Flamengo2.png",
     imagenes: [
-      "Imagenes/Flamengo.png",
-      "Imagenes/Flamengo2.png"
+      "imagenes/Flamengo.png",
+      "imagenes/Flamengo2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -613,11 +613,11 @@ const PRODUCTOS = [
     id: 33,
     nombre: "LIVERPOOL",
     precio: 45000,
-    imgNormal: "Imagenes/Liver.png",
-    imgHover: "Imagenes/Liver2.png",
+    imgNormal: "imagenes/Liver.png",
+    imgHover: "imagenes/Liver2.png",
     imagenes: [
-      "Imagenes/Liver.png",
-      "Imagenes/Liver2.png"
+      "imagenes/Liver.png",
+      "imagenes/Liver2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -632,11 +632,11 @@ const PRODUCTOS = [
     id: 34,
     nombre: "CHELSEA",
     precio: 45000,
-    imgNormal: "Imagenes/Chelsea.png",
-    imgHover: "Imagenes/Chelsea2.png",
+    imgNormal: "imagenes/Chelsea.png",
+    imgHover: "imagenes/Chelsea2.png",
     imagenes: [
-      "Imagenes/Chelsea.png",
-      "Imagenes/Chelsea2.png"
+      "imagenes/Chelsea.png",
+      "imagenes/Chelsea2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -658,5 +658,6 @@ function buscarProducto(id) {
 function filtrarPorCategoria(categoria) {
   return PRODUCTOS.filter(p => p.categoria === categoria);
 }
+
 
 console.log(`✅ productos-data.js cargado: ${PRODUCTOS.length} productos disponibles`);
