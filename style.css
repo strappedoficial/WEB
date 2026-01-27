@@ -1701,67 +1701,6 @@ section.ofertas {
   }
 }
 
-@media (max-width: 500px) {
-
-  .ofertas-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* ðŸ”¥ 2 columnas como Aternum */
-    gap: 10px;
-    padding: 0 25px;
-  }
-
-  .producto-oferta {
-    position: relative;
-    width: 100%;
-    background: #0c0c0c;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    padding: 20px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-
-  .producto-oferta img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-
-  .etiqueta {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-150%);
-    background-color: #e6dedb;
-    color: #24272B;
-    font-size: 11px;
-    font-family: "Archivo Black", sans-serif;
-    padding: 4px 9px;
-    border-radius: 7px;
-    letter-spacing: 0.5px;
-  }
-
-  .ofertas-titulo {
-    text-align: center;
-    padding-left: 25px;
-    font-size: 20px;
-  }
-
-  .ofertas-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .Agregar-carrito {
-    font-size: 10px;
-    padding: 0.6rem 1.5rem;
-    border-radius: 20px;
-  }
-}
-
-
 /* =======================================================
    ✅ CATALOG - GRID 4 COLUMNAS
 ======================================================= */
@@ -1939,21 +1878,21 @@ section.ofertas {
   }
 }
 
-/* Móviles pequeños - 1 COLUMNA (MÁS GRANDE) */
-@media (max-width: 500px) {
+/* Móviles (iPhone y similar) - 1 COLUMNA (MÁS GRANDE) */
+@media (max-width: 640px) {
   .catalog {
-    padding: 40px 30px; /* Más padding lateral */
+    padding: 40px 20px; /* Más padding lateral */
   }
 
   #catalog-products {
     grid-template-columns: 1fr; /* ✅ UNA SOLA COLUMNA */
-    gap: 30px; /* Más separación entre productos */
-    padding: 20px 30px;
+    gap: 25px; /* Más separación entre productos */
+    padding: 20px 15px;
   }
 
   .catalog-product {
-    padding: 25px; /* Más padding interno */
-    max-width: 450px; /* Limita el ancho máximo */
+    padding: 20px; /* Más padding interno */
+    max-width: 100%; /* Limita el ancho máximo */
     margin: 0 auto; /* Centra la tarjeta */
   }
 
@@ -1965,13 +1904,12 @@ section.ofertas {
   .producto-img img {
     width: 100%;
     height: auto;
-    min-height: 280px; /* ✅ Altura mínima para imágenes grandes */
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .catalog-product h3 {
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .precio-oferta {
@@ -1980,31 +1918,12 @@ section.ofertas {
 
   .etiqueta {
     font-size: 12px;
-    padding: 7px 12px;
+    padding: 6px 10px;
   }
 
   .catalogo-titulo {
     font-size: 24px;
-    margin-bottom: 40px;
-  }
-}
-
-/* Móviles EXTRA pequeños (opcional) */
-@media (max-width: 380px) {
-  #catalog-products {
-    padding: 20px 20px;
-  }
-
-  .catalog {
-    padding: 40px 20px;
-  }
-
-  .catalog-product {
-    padding: 20px;
-  }
-
-  .producto-img img {
-    min-height: 300px;
+    margin-bottom: 35px;
   }
 }
 
@@ -4068,29 +3987,6 @@ ul.detalles li {
 
   .nosotros-valores {
     margin-bottom: 80px;
-  }
-}
-
-@media (max-width: 480px) {
-  .nosotros-titulo {
-    font-size: 2rem;
-    letter-spacing: 5px;
-  }
-
-  .nosotros-banner-img {
-    height: 250px;
-  }
-
-  .nosotros-subtitle {
-    font-size: 1.5rem;
-  }
-
-  .nosotros-subtitle-center {
-    font-size: 1.5rem;
-  }
-
-  .nosotros-container {
-    padding: 0;
   }
 }
 
