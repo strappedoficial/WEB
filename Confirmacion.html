@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STRAPPED | Pedido Confirmado</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .confirmacion-section {
+        padding: 120px 20px;
+        text-align: center;
+        font-family: 'Archivo Black', sans-serif;
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .confirmacion-icon {
+        width: 80px;
+        height: 80px;
+        background: #25D366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 30px;
+        animation: scaleIn 0.5s ease;
+    }
+
+    @keyframes scaleIn {
+        from { transform: scale(0); }
+        to { transform: scale(1); }
+    }
+
+    .confirmacion-icon svg {
+        width: 45px;
+        height: 45px;
+        stroke: white;
+        stroke-width: 3;
+    }
+
+    .confirmacion-title {
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        color: #fff;
+        animation: fadeInUp 0.6s ease 0.2s both;
+    }
+
+    .confirmacion-subtitle {
+        color: #ccc;
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 1.6;
+        max-width: 500px;
+        animation: fadeInUp 0.6s ease 0.3s both;
+    }
+
+    .pedido-numero {
+        font-size: 14px;
+        color: #888;
+        margin: 20px 0 40px;
+        animation: fadeInUp 0.6s ease 0.4s both;
+    }
+
+    .confirmacion-buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        animation: fadeInUp 0.6s ease 0.5s both;
+    }
+
+    .btn-whatsapp, .btn-inicio {
+        padding: 14px 35px;
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        font-family: 'Archivo Black', sans-serif;
+    }
+
+    .btn-whatsapp {
+        background: #25D366;
+        color: white;
+    }
+
+    .btn-whatsapp:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-inicio {
+        background: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+    }
+
+    .btn-inicio:hover {
+        background: #fff;
+        color: #000;
+        transform: translateY(-2px);
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .confirmacion-title {
+            font-size: 24px;
+        }
+
+        .confirmacion-subtitle {
+            font-size: 14px;
+        }
+
+        .confirmacion-buttons {
+            flex-direction: column;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .btn-whatsapp, .btn-inicio {
+            width: 100%;
+        }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="menu container">
+      <a href="index.html" class="logo-compra">STRAPPED</a>
+    </div>
+  </header>
+
+  <section class="confirmacion-section">
+    
+    <div class="confirmacion-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+      </svg>
+    </div>
+
+    <h2 class="confirmacion-title">¡PEDIDO RECIBIDO!</h2>
+
+    <p class="confirmacion-subtitle">
+      Ya tenemos la información de tu pedido.<br>
+      En breves nos contactaremos contigo por WhatsApp para confirmar los detalles.
+    </p>
+
+    <p class="pedido-numero" id="numero-pedido">
+      Número de pedido: #000000
+    </p>
+
+    <div class="confirmacion-buttons">
+      <a href="#" class="btn-whatsapp" id="btn-whatsapp">
+        CONTACTAR POR WHATSAPP
+      </a>
+      <a href="index.html" class="btn-inicio">
+        IR AL INICIO
+      </a>
+    </div>
+
+  </section>
+
+  <footer id="contacto">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>STRAPPED</h4>
+        <p>Tu marca de confianza en tecnología, accesorios y estilo urbano.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>INFORMACIÓN</h4>
+        <ul>
+          <li><a href="about.html">Sobre Nosotros</a></li>
+          <li><a href="politica.html">Política de Privacidad</a></li>
+          <li><a href="envios.html">Envíos y Devoluciones</a></li>
+          <li><a href="soporte.html">Soporte</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>SÍGUENOS</h4>
+        <ul class="iconos-footer">
+          <li><a href="https://www.instagram.com/strappedco.urban/"><img src="imagenes/instagram.png" alt="Instagram"></a></li>
+          <li><a href="https://www.tiktok.com/@_strappedco_"><img src="imagenes/tiktok.png" alt="TikTok"></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 STRAPPED. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Obtener datos del pedido desde localStorage
+    const pedidoData = JSON.parse(localStorage.getItem('ultimo_pedido') || '{}');
+    
+    // Generar número de pedido
+    const numeroPedido = pedidoData.numeroPedido || Date.now().toString().slice(-6);
+    document.getElementById('numero-pedido').textContent = `Número de pedido: #${numeroPedido}`;
+
+    // Configurar botón de WhatsApp
+    const WHATSAPP_NEGOCIO = '573237830141'; // Tu número de WhatsApp
+    
+    const btnWhatsApp = document.getElementById('btn-whatsapp');
+    
+    if (pedidoData.nombre) {
+      const mensaje = `¡Hola! Acabo de hacer un pedido:%0A%0A` +
+        `*Nombre:* ${pedidoData.nombre}%0A` +
+        `*Teléfono:* ${pedidoData.telefono || 'No proporcionado'}%0A` +
+        `*Número de pedido:* #${numeroPedido}%0A%0A` +
+        `Quisiera confirmar los detalles de mi compra.`;
+      
+      btnWhatsApp.href = `https://wa.me/${WHATSAPP_NEGOCIO}?text=${mensaje}`;
+    } else {
+      // Si no hay datos del pedido, solo abrir WhatsApp
+      btnWhatsApp.href = `https://wa.me/${WHATSAPP_NEGOCIO}`;
+    }
+
+    // Limpiar datos del pedido después de 5 segundos (opcional)
+    setTimeout(() => {
+      localStorage.removeItem('ultimo_pedido');
+    }, 5000);
+  </script>
+
+</body>
+</html>     

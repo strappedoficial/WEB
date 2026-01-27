@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STRAPPED - Registro</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* ESTILOS LOCALES SOLO PARA REGISTER */
+    .register-section {
+        padding: 80px 0;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        margin-top: 50px;
+    }
+
+    .register-title {
+        font-size: 26px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .register-subtitle {
+        color: #777;
+        margin-bottom: 40px;
+        font-size: 15px;
+    }
+
+    .register-box {
+        width: 420px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .register-box input {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        font-size: 14px;
+        outline: none;
+    }
+
+    .register-btn {
+        width: 100%;
+        padding: 14px;
+        background: #111;
+        color: white;
+        font-size: 14px;
+        letter-spacing: 2px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .login-text {
+        font-size: 13px;
+        margin-top: 10px;
+        color: #444;
+    }
+
+    .login-link {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .register-error {
+        color: red;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ==============================
+          HEADER (MISMO QUE LOGIN)
+================================= -->
+<header class="header">
+    <div class="menu container">
+
+      <input type="checkbox" id="menu" style="display:none;">
+      <label for="menu" id="btnMenuUndergold" class="icono" aria-label="Abrir menú">
+        <img src="Imagenes/Icono.png" alt="icono">
+      </label>
+      
+      <div id="botones-panel" class="botones-panel">
+        <button id="cerrar-menu" class="cerrar-menu">×</button>
+        <ul class="menu-lista">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="Catalogo.html">CATÁLOGO</a></li>
+            <li><a href="#sale">SALE</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+            <li class="login-mobile">
+              <a href="#" id="loginBtn">Iniciar Sesión / Registrarse</a>
+            </li>
+        </ul>
+      </div>
+
+      <div id="overlay-menu" class="overlay-menu"></div>
+
+      <a href="index.html" class="logo">STRAPPED</a>
+
+      <ul class="botones">
+            <!-- ===== INICIO ===== -->
+            <li>
+              <a href="index.html">INICIO</a>
+              <div class="botones-sub">
+                <div class="contenedor">
+                  <div class="col">
+                    <h4>SOBRE NOSOTROS</h4>
+                    <a href="about.html">¿Quiénes Somos?</a>
+                    <a href="about.html#historia">Nuestra Historia</a>
+                  </div>
+                  <div class="col">
+                    <h4>INFORMACIÓN</h4>
+                    <a href="Devoluciones.html">Envíos y Devoluciones</a>
+                    <a href="Devoluciones.html#garantia">Garantías</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- ===== CATÁLOGO ===== -->
+            <li>
+              <a href="Catalogo.html">CATÁLOGO</a>
+              <div class="botones-sub">
+                <div class="contenedor">
+                  <div class="col">
+                    <h4>CLUBES EUROPEOS</h4>
+                    <a href="Clubes.html?region=europa">Premier League</a>
+                    <a href="Clubes.html?region=europa">La Liga</a>
+                    <a href="Clubes.html?region=europa">Serie A</a>
+                    <a href="Clubes.html?region=europa">Bundesliga</a>
+                  </div>
+                  <div class="col">
+                    <h4>CLUBES AMERICANOS</h4>
+                    <a href="Clubes.html?region=america">Liga Argentina</a>
+                    <a href="Clubes.html?region=america">Liga Brasileña</a>
+                    <a href="Clubes.html?region=america">Liga Colombiana</a>
+                    <a href="Clubes.html?region=america">Liga Mexicana</a>
+                  </div>
+                  <div class="col">
+                    <h4>SELECCIONES</h4>
+                    <a href="Nacionalidades.html">Selecciones Mundiales</a>
+                    <a href="Nacionalidades.html#europa">Europa</a>
+                    <a href="Nacionalidades.html#america">América</a>
+                    <a href="Catalogo.html">Ver Todo el Catálogo</a>
+                  </div>
+                </div>
+              </div>            
+            </li>
+
+            <!-- ===== CONTACTO ===== -->
+            <li>
+              <a href="#contacto">SÍGUENOS</a>
+              <div class="botones-sub">
+                <div class="contenedor">
+                  <div class="col">
+                    <h4>SÍGUENOS</h4>
+                    <a href="https://www.instagram.com/strappedco.urban/" target="_blank">
+                      📷 Instagram
+                    </a>
+                    <a href="https://www.tiktok.com/@_strappedco_" target="_blank">
+                      🎵 TikTok
+                    </a>
+                    <a href="https://wa.me/573237830141" target="_blank">
+                      💬 WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+      </ul>
+
+      <ul class="iconos">
+        <li><a href="#"><img src="imagenes/Lupa.png" alt="Buscar"></a></li>
+        <li id="panel-usuario" class="panel-usuario">
+          <button class="usuario-btn" aria-label="Abrir usuario" type="button">
+            <img src="imagenes/User.png" class="icono-user" alt="Usuario">
+          </button>
+        </li>
+        <li style="position: relative;">
+          <button id="btn-carrito" class="car-icon" type="button" aria-label="Abrir Carrito">
+              <img src="Imagenes/Bolsa.png" alt="Carrito">
+              <span id="carrito-contador" class="contador-carrito">0</span>
+          </button>
+        </li>
+      </ul>
+
+      <div class="menu-overlay"></div>
+
+      <div id="carrito-panel" class="carrito-panel">
+        <div id="carrito-header" class="carrito-header">
+          <h2>TU CARRITO</h2>
+          <button id="cerrar-carrito" class="cerrar-carrito">×</button>
+        </div>
+
+        <div id="carrito-items-container"></div>
+
+        <div id="carrito-footer" class="carrito-footer">
+          <div id="carrito-total">$0</div>
+          <button id="carrito-comprar" class="btn">Pagar pedido</button>
+        </div>
+      </div>
+
+      <!-- Fondo oscuro al abrir -->
+      <div id="overlay-carrito" class="overlay-carrito"></div>
+
+      <!-- MODAL LOGIN -->
+      <div id="authModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" id="closeModal">&times;</span>
+
+          <div class="form-container">
+            <div class="form-toggle">
+              <button id="loginToggle" class="active">Iniciar Sesión</button>
+              <button id="registerToggle">Registrarse</button>
+            </div>
+
+            <form id="loginForm" class="form active">
+              <h2>Iniciar Sesión</h2>
+              <input type="email" name="email" placeholder="Correo electrónico" required>
+              <input type="password" name="password" placeholder="Contraseña" required>
+              <button type="submit" class="btn">Entrar</button>
+            </form>
+
+            <form id="registerForm" class="form">
+              <h2>Crear Cuenta</h2>
+              <input type="text" name="nombre" placeholder="Nombre completo" required>
+              <input type="email" name="email" placeholder="Correo electrónico" required>
+              <input type="password" name="password" placeholder="Contraseña" required>
+              <button type="submit" class="btn">Registrarse</button>
+            </form>
+
+            <button id="googleLogin" class="btn btn-google">
+              <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" 
+                  style="width:20px;margin-right:8px;">
+              Continuar con Google
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔎 MODAL DE BÚSQUEDA -->
+      <div id="busqueda-modal" class="busqueda-modal">
+        <div class="busqueda-contenido">
+          <div class="container-input">
+            <input placeholder="BUSCAR..." type="text" name="text" class="input" id="inputBusqueda">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="black" class="icono-buscar">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18.5a7.5 7.5 0 006.15-1.85z" />
+            </svg>
+          </div>
+          <button id="cerrarBusqueda" class="cerrar-busqueda">×</button>
+          <div id="resultadosBusqueda" class="resultados-busqueda"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- ==============================
+          FORMULARIO REGISTER
+================================= -->
+<section class="register-section">
+
+    <h2 class="register-title">REGISTRO</h2>
+
+    <p class="register-subtitle">Completa la información para crear tu cuenta:</p>
+
+    <div class="register-box">
+
+        <input type="text" id="reg-nombre" placeholder="Nombre completo">
+
+        <input type="email" id="reg-email" placeholder="Correo electrónico">
+
+        <input type="password" id="reg-password" placeholder="Contraseña">
+
+        <button class="register-btn" id="btnRegistrar">CREAR CUENTA</button>
+
+        <p class="login-text">
+            ¿Ya tienes una cuenta?
+            <a href="Login.html" class="login-link">Iniciar sesión</a>
+        </p>
+
+        <p id="register-error" class="register-error"></p>
+
+    </div>
+
+</section>
+
+<!-- ==============================
+              FOOTER (IGUAL)
+================================= -->
+<footer id="contacto">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>STRAPPED</h4>
+        <p>Tu marca de confianza en tecnología y estilo urbano.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>INFORMACIÓN</h4>
+        <ul>
+          <li><a href="about.html">Sobre Nosotros</a></li>
+          <li><a href="politica.html">Política de Privacidad</a></li>
+          <li><a href="envios.html">Envíos y Devoluciones</a></li>
+          <li><a href="soporte.html">Soporte</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>SÍGUENOS</h4>
+        <ul class="iconos-footer">
+          <li><a href="#"><img src="imagenes/instagram.png"></a></li>
+          <li><a href="#"><img src="imagenes/tiktok.png"></a></li>
+        </ul>
+      </div>
+    </div>
+</footer>
+
+<script>
+/* =====================================================
+   4️⃣ MOSTRAR MODAL PARA INGRESAR CÓDIGO
+===================================================== */
+function mostrarModalVerificacion() {
+    return new Promise(resolve => {
+        const modal = document.createElement("div");
+        modal.innerHTML = `
+            <div style="
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.6); display: flex;
+                justify-content: center; align-items: center; z-index: 999999;
+            ">
+                <div style="
+                    background: #fff; padding: 25px; width: 330px;
+                    border-radius: 12px; text-align: center;
+                ">
+                    <h3>Verificar correo</h3>
+                    <p>Ingresa el código enviado a tu email:</p>
+
+                    <input id="codigoInput" type="text" 
+                        placeholder="Código"
+                        style="width:100%;padding:10px;margin-top:10px;
+                        border-radius:8px;border:1px solid #ccc;
+                    ">
+
+                    <button id="btnEnviarCodigo" style="
+                        width:100%;margin-top:15px;padding:10px;
+                        background:black;color:white;
+                        border:none;border-radius:8px;cursor:pointer;
+                    ">Verificar</button>
+
+                    <button id="cancelarModal" style="
+                        width:100%;margin-top:10px;padding:10px;
+                        background:#ddd;color:black;
+                        border:none;border-radius:8px;cursor:pointer;
+                    ">Cancelar</button>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        modal.querySelector("#btnEnviarCodigo").addEventListener("click", () => {
+            const code = modal.querySelector("#codigoInput").value.trim();
+            modal.remove();
+            resolve(code);
+        });
+
+        modal.querySelector("#cancelarModal").addEventListener("click", () => {
+            modal.remove();
+            resolve(null);
+        });
+    });
+}
+
+/* =====================================================
+   5️⃣ FLUJO PRINCIPAL DE REGISTRO
+===================================================== */
+document.getElementById("btnRegistrar").addEventListener("click", async () => {
+
+    const nombre = document.getElementById("reg-nombre").value.trim();
+    const email  = document.getElementById("reg-email").value.trim();
+    const password = document.getElementById("reg-password").value.trim();
+    const errorBox = document.getElementById("register-error");
+
+    errorBox.textContent = "";
+
+    // validación inicial
+    if (!nombre || !email || !password) {
+        errorBox.textContent = "Completa todos los campos.";
+        return;
+    }
+
+    // 1️⃣ Enviar código
+    const envio = await enviarCodigo(email);
+    if (!envio.success) {
+        errorBox.textContent = envio.error || "No se pudo enviar el código.";
+        return;
+    }
+
+    // 2️⃣ Mostrar modal y obtener código
+    const code = await mostrarModalVerificacion();
+    if (!code) {
+        errorBox.textContent = "Debes ingresar el código.";
+        return;
+    }
+
+    // 3️⃣ Verificar código
+    const verificacion = await verificarCodigo(email, code);
+    if (!verificacion.success) {
+        errorBox.textContent = verificacion.error || "Código incorrecto.";
+        return;
+    }
+
+    // 4️⃣ Registrar usuario
+    const registro = await registrarUsuario(nombre, email, password);
+    if (!registro.success) {
+        errorBox.textContent = registro.error || "Error al registrar.";
+        return;
+    }
+
+    alert("Cuenta creada correctamente ✔ Ahora puedes iniciar sesión.");
+    window.location.href = "Login.html";
+});
+</script>
+
+
+<script src="auth.js"></script>
+<script src="carrito.js"></script>
+
+</body>
+</html>

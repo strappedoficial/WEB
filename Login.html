@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STRAPPED</title>
+  <link rel="stylesheet" href="style.css">
+  <style>html { scroll-behavior: smooth; }</style>
+    <!-- 🔥 ESTILOS LOCALES PARA LA PÁGINA DE LOGIN -->
+  <style>
+    .login-section {
+        padding: 80px 0;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        margin-top: 50px;
+    }
+
+    .login-title {
+        font-size: 26px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .login-subtitle {
+        color: #777;
+        margin-bottom: 40px;
+        font-size: 15px;
+    }
+
+    .login-box {
+        width: 420px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .login-box input {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        font-size: 14px;
+        outline: none;
+    }
+
+    .password-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .password-row input {
+        width: 60%;
+    }
+
+    .forgot-password {
+        color: #777;
+        font-size: 13px;
+        text-decoration: none;
+    }
+
+    .login-btn {
+        width: 100%;
+        padding: 14px;
+        background: #111;
+        color: white;
+        font-size: 14px;
+        letter-spacing: 2px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .register-text {
+        font-size: 13px;
+        margin-top: 10px;
+        color: #444;
+    }
+
+    .register-link {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .login-error {
+        color: red;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+  </style>
+  <!-- 🔥 FIN DE ESTILOS -->
+
+</head>
+<body>
+
+<header class="header">
+    <div class="menu container">
+
+      <input type="checkbox" id="menu" style="display:none;">
+      <label for="menu" id="btnMenuUndergold" class="icono" aria-label="Abrir menú">
+        <img src="Imagenes/Icono.png" alt="icono">
+      </label>
+      
+      <div id="botones-panel" class="botones-panel">
+        <button id="cerrar-menu" class="cerrar-menu">×</button>
+        <ul class="menu-lista">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="Catalogo.html">CATÁLOGO</a></li>
+            <li><a href="#sale">SALE</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+            <li class="login-mobile">
+              <a href="#" id="loginBtn">Iniciar Sesión / Registrarse</a>
+            </li>
+        </ul>
+      </div>
+
+      <div id="overlay-menu" class="overlay-menu"></div>
+
+      <a href="index.html" class="logo">STRAPPED</a>
+
+      <ul class="botones">
+            <!-- ===== INICIO ===== -->
+            <li>
+              <a href="index.html">INICIO</a>
+              <div class="botones-sub">
+                <div class="contenedor">
+                  <div class="col">
+                    <h4>SOBRE NOSOTROS</h4>
+                    <a href="about.html">¿Quiénes Somos?</a>
+                    <a href="about.html#historia">Nuestra Historia</a>
+                  </div>
+                  <div class="col">
+                    <h4>INFORMACIÓN</h4>
+                    <a href="Devoluciones.html">Envíos y Devoluciones</a>
+                    <a href="Devoluciones.html#garantia">Garantías</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- ===== CATÁLOGO ===== -->
+            <li>
+              <a href="Catalogo.html">CATÁLOGO</a>
+              <div class="botones-sub">
+                <div class="contenedor">
+                  <div class="col">
+                    <h4>CLUBES EUROPEOS</h4>
+                    <a href="Clubes.html?region=europa">Premier League</a>
+                    <a href="Clubes.html?region=europa">La Liga</a>
+                    <a href="Clubes.html?region=europa">Serie A</a>
+                    <a href="Clubes.html?region=europa">Bundesliga</a>
+                  </div>
+                  <div class="col">
+                    <h4>CLUBES AMERICANOS</h4>
+                    <a href="Clubes.html?region=america">Liga Argentina</a>
+                    <a href="Clubes.html?region=america">Liga Brasileña</a>
+                    <a href="Clubes.html?region=america">Liga Colombiana</a>
+                    <a href="Clubes.html?region=america">Liga Mexicana</a>
+                  </div>
+                  <div class="col">
+                    <h4>SELECCIONES</h4>
+                    <a href="Nacionalidades.html">Selecciones Mundiales</a>
+                    <a href="Nacionalidades.html#europa">Europa</a>
+                    <a href="Nacionalidades.html#america">América</a>
+                    <a href="Catalogo.html">Ver Todo el Catálogo</a>
+                  </div>
+                </div>
+              </div>            
+            </li>
+
+            <!-- ===== CONTACTO ===== -->
+            <li>
+              <a href="#contacto">SÍGUENOS</a>
+              <div class="botones-sub">
+                <div class="contenedor">
+                  <div class="col">
+                    <h4>SÍGUENOS</h4>
+                    <a href="https://www.instagram.com/strappedco.urban/" target="_blank">
+                      📷 Instagram
+                    </a>
+                    <a href="https://www.tiktok.com/@_strappedco_" target="_blank">
+                      🎵 TikTok
+                    </a>
+                    <a href="https://wa.me/573237830141" target="_blank">
+                      💬 WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+      </ul>
+
+      <ul class="iconos">
+        <li><a href="#"><img src="imagenes/Lupa.png" alt="Buscar"></a></li>
+        <li id="panel-usuario" class="panel-usuario">
+          <button class="usuario-btn" aria-label="Abrir usuario" type="button">
+            <img src="imagenes/User.png" class="icono-user" alt="Usuario">
+          </button>
+        </li>
+        <li style="position: relative;">
+          <button id="btn-carrito" class="car-icon" type="button" aria-label="Abrir Carrito">
+              <img src="Imagenes/Bolsa.png" alt="Carrito">
+              <span id="carrito-contador" class="contador-carrito">0</span>
+          </button>
+        </li>
+      </ul>
+
+      <div class="menu-overlay"></div>
+
+      <div id="carrito-panel" class="carrito-panel">
+        <div id="carrito-header" class="carrito-header">
+          <h2>TU CARRITO</h2>
+          <button id="cerrar-carrito" class="cerrar-carrito">×</button>
+        </div>
+
+        <div id="carrito-items-container"></div>
+
+        <div id="carrito-footer" class="carrito-footer">
+          <div id="carrito-total">$0</div>
+          <button id="carrito-comprar" class="btn">Pagar pedido</button>
+        </div>
+      </div>
+
+      <!-- Fondo oscuro al abrir -->
+      <div id="overlay-carrito" class="overlay-carrito"></div>
+
+      <!-- MODAL LOGIN -->
+      <div id="authModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" id="closeModal">&times;</span>
+
+          <div class="form-container">
+            <div class="form-toggle">
+              <button id="loginToggle" class="active">Iniciar Sesión</button>
+              <button id="registerToggle">Registrarse</button>
+            </div>
+
+            <form id="loginForm" class="form active">
+              <h2>Iniciar Sesión</h2>
+              <input type="email" name="email" placeholder="Correo electrónico" required>
+              <input type="password" name="password" placeholder="Contraseña" required>
+              <button type="submit" class="btn">Entrar</button>
+            </form>
+
+            <form id="registerForm" class="form">
+              <h2>Crear Cuenta</h2>
+              <input type="text" name="nombre" placeholder="Nombre completo" required>
+              <input type="email" name="email" placeholder="Correo electrónico" required>
+              <input type="password" name="password" placeholder="Contraseña" required>
+              <button type="submit" class="btn">Registrarse</button>
+            </form>
+
+            <button id="googleLogin" class="btn btn-google">
+              <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" 
+                  style="width:20px;margin-right:8px;">
+              Continuar con Google
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔎 MODAL DE BÚSQUEDA -->
+      <div id="busqueda-modal" class="busqueda-modal">
+        <div class="busqueda-contenido">
+          <div class="container-input">
+            <input placeholder="BUSCAR..." type="text" name="text" class="input" id="inputBusqueda">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="black" class="icono-buscar">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18.5a7.5 7.5 0 006.15-1.85z" />
+            </svg>
+          </div>
+          <button id="cerrarBusqueda" class="cerrar-busqueda">×</button>
+          <div id="resultadosBusqueda" class="resultados-busqueda"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <section class="login-section">
+
+        <h2 class="login-title">INICIAR SESIÓN</h2>
+
+        <p class="login-subtitle">Escribe tu correo electrónico y contraseña para iniciar sesión:</p>
+
+        <div class="login-box">
+
+            <input type="email" id="login-email" placeholder="Correo electrónico">
+
+            <div class="password-row">
+                <input type="password" id="login-password" placeholder="Contraseña">
+                <a href="#" class="forgot-password">¿Olvidaste la contraseña?</a>
+            </div>
+
+            <button class="login-btn" id="btnIniciar">INICIAR SESIÓN</button>
+
+            <p class="register-text">
+                ¿No tienes una cuenta?
+                <a href="Register.html" class="register-link">Registro</a>
+            </p>
+
+            <p id="login-error" class="login-error"></p>
+
+        </div>
+
+    </section>
+
+  <footer id="contacto">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>STRAPPED</h4>
+        <p>Tu marca de confianza en tecnología, accesorios y estilo urbano. Inspirada en el diseño moderno y la autenticidad.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>INFORMACIÓN</h4>
+        <ul>
+          <li><a href="about.html">Sobre Nosotros</a></li>
+          <li><a href="politica.html">Política de Privacidad</a></li>
+          <li><a href="envios.html">Envíos y Devoluciones</a></li>
+          <li><a href="soporte.html">Soporte</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>SÍGUENOS</h4>
+        <ul class="iconos-footer">
+          <li><a href="https://www.instagram.com/strappedco.urban/"><img src="imagenes/instagram.png" alt="Instagram"></a></li>
+          <li><a href="https://www.tiktok.com/@_strappedco_"><img src="imagenes/tiktok.png" alt="TikTok"></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 STRAPPED. Todos los derechos reservados.</p>
+  </footer>  
+
+<script>
+        document.getElementById("btnIniciar").addEventListener("click", async () => {
+            const email = document.getElementById("login-email").value.trim();
+            const password = document.getElementById("login-password").value.trim();
+            const errorBox = document.getElementById("login-error");
+
+            errorBox.textContent = ""; 
+
+            if (!email || !password) {
+                errorBox.textContent = "Completa todos los campos.";
+                return;
+            }
+
+            // Usar la función centralizada de auth.js
+            const result = await loginUser(email, password);
+
+            if (!result.success) {
+                errorBox.textContent = result.error || "Error al iniciar sesión.";
+                return;
+            }
+
+            // Redirección según rol (ahora el rol viene en el resultado de loginUser)
+            if (result.rol === "admin") {
+                window.location.href = "admin.html"; // tu panel admin
+            } else {
+                window.location.href = "index.html"; // o perfil
+            }
+
+        });
+    </script>
+  <script src="carrito.js"></script> 
+  <script src="auth.js"></script>
+
+
+    
+</body>
+</html>

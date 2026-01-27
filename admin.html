@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STRAPPED</title>
+  <link rel="stylesheet" href="style.css">
+    <style>
+    .form-box, .tabla-box {
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        margin-bottom:20px;
+        margin-top: 100px;
+    }
+
+    input, textarea {
+        width: 100%;
+        margin-bottom:10px;
+        padding:10px;
+        border:1px solid #ccc;
+        border-radius:5px;
+    }
+
+    button {
+        padding:10px 20px;
+        background:black;
+        color:white;
+        border:none;
+        cursor:pointer;
+        border-radius:5px;
+        margin-top:10px;
+    }
+
+    table {
+        width:100%;
+        border-collapse:collapse;
+        margin-top:20px;
+    }
+
+    table th, table td {
+        border:1px solid #ddd;
+        padding:10px;
+        text-align:left;
+    }
+
+    .btn-delete { background:#c40000; }
+    .btn-edit { background:#0066ff; }
+
+    input, textarea, select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical; /* Permite que el usuario ajuste la altura */
+    min-height: 80px;
+}
+
+select {
+    cursor: pointer;
+}
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="menu container">
+
+      <input type="checkbox" id="menu" style="display:none;">
+      <!-- botón (label) con id y clase para que JS lo encuentre fácilmente -->
+      <label for="menu" id="btnMenuUndergold" class="icono" aria-label="Abrir menú">
+        <img src="Imagenes/Icono.png" alt="icono">
+      </label>
+      <!-- PANEL LATERAL RESPONSIVE -->
+      <div id="botones-panel" class="botones-panel">
+        <button id="cerrar-menu" class="cerrar-menu">×</button>
+        <ul class="menu-lista">
+            <li>
+              <a href="#catalogo">CATÁLOGO</a>
+            </li>
+            <li>
+              <a href="#soporte">HOMBRES</a>
+            </li>
+            <li>
+              <a href="#info">MUJERES</a>
+            </li>
+            <li>
+              <a href="#contacto">SALE</a>
+            </li>
+            <li class="login-mobile">
+              <a href="#" id="loginBtn">Iniciar Sesión / Registrarse</a>
+            </li>
+        </ul>
+      </div>
+
+      <div id="overlay-menu" class="overlay-menu"></div>
+
+
+
+      <a href="index.html" class="logo">STRAPPED</a>
+
+      <ul class="botones">
+            <li>
+              <a href="#catalogo">CATÁLOGO</a>
+              <div class="botones-sub">
+                <div class="contenedor">
+                  <div class="col">
+                    <h4>TECNOLOGÍA</h4>
+                    <a href="Tecnologia.html">Audifonos Strapped</a>
+                    <a href="relojes.html">Cargador Iphone</a>
+                    <a href="bolsos.html">Apple watch</a>
+                  </div>
+
+                  <div class="col">
+                    <h4>RELOJES</h4>
+                    <a href="Tecnologia.html">Reloj1</a>
+                    <a href="Tecnologia.html">Reloj2</a>
+                    <a href="Tecnologia.html">Reloj3</a>
+                  </div>
+
+                  <div class="col">
+                    <h4>BOLSOS Y CARRIELES</h4>
+                    <a href="#whatsapp">Bolsos Strapped</a>
+                    <a href="#instagram">Morrales Strapped</a>
+                    <a href="#correo">Billeteras Strapped</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#soporte">HOMBRES</a>
+              <div class="botones-sub">
+                <div class="contenedor">
+                  <div class="col">
+                    <h4>BUZOS</h4>
+                    <a href="Tecnologia.html">Underwater</a>
+                    <a href="relojes.html">Boxy Fit</a>
+                    <a href="bolsos.html">Oversize</a>
+                  </div>
+
+                  <div class="col">
+                    <h4>ACCESORIOS</h4>
+                    <a href="Tecnologia.html">Relojes</a>
+                    <a href="Tecnologia.html">Bolsos</a>
+                    <a href="Tecnologia.html">Maletas</a>
+                  </div>
+
+                  <div class="col">
+                    <h4>BOLSOS Y CARRIELES</h4>
+                    <a href="#whatsapp">Bolsos Strapped</a>
+                    <a href="#instagram">Morrales Strapped</a>
+                    <a href="#correo">Billeteras Strapped</a>
+                  </div>
+                </div>
+              </div>            
+            </li>
+              
+            <li>
+              <a href="#info">MUJERES</a>
+              <div class="botones-sub">
+                <div class="contenedor">
+                  <div class="col">
+                    <h4>JAJAJA</h4>
+                    <a href="Tecnologia.html">3237830141</a>
+                    <a href="relojes.html">Cargador Iphone</a>
+                    <a href="bolsos.html">Apple watch</a>
+                  </div>
+
+                  <div class="col">
+                    <h4>RELOJES</h4>
+                    <a href="Tecnologia.html">Reloj1</a>
+                    <a href="Tecnologia.html">Reloj2</a>
+                    <a href="Tecnologia.html">Reloj3</a>
+                  </div>
+
+                  <div class="col">
+                    <h4>BOLSOS Y CARRIELES</h4>
+                    <a href="#whatsapp">Bolsos Strapped</a>
+                    <a href="#instagram">Morrales Strapped</a>
+                    <a href="#correo">Billeteras Strapped</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a href="#contacto">SALE</a>
+              <div class="botones-sub">
+                <div class="contenedor">
+                  <div class="col">
+                    <h4>JAJAJA</h4>
+                    <a href="Tecnologia.html">3237830141</a>
+                    <a href="relojes.html">Cargador Iphone</a>
+                    <a href="bolsos.html">Apple watch</a>
+                  </div>
+
+                  <div class="col">
+                    <h4>RELOJES</h4>
+                    <a href="Tecnologia.html">Reloj1</a>
+                    <a href="Tecnologia.html">Reloj2</a>
+                    <a href="Tecnologia.html">Reloj3</a>
+                  </div>
+
+                  <div class="col">
+                    <h4>BOLSOS Y CARRIELES</h4>
+                    <a href="#whatsapp">Bolsos Strapped</a>
+                    <a href="#instagram">Morrales Strapped</a>
+                    <a href="#correo">Billeteras Strapped</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+      </ul>
+
+      <ul class="iconos">
+        <li id="panel-usuario" class="panel-usuario">
+          <button class="usuario-btn" aria-label="Abrir usuario" type="button">
+            <img src="imagenes/User.png" class="icono-user" alt="Usuario">
+          </button>
+        </li>
+      </ul>
+
+      <!-- MODAL LOGIN -->
+      <div id="authModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" id="closeModal">&times;</span>
+
+          <div class="form-container">
+            <div class="form-toggle">
+              <button id="loginToggle" class="active">Iniciar Sesión</button>
+              <button id="registerToggle">Registrarse</button>
+            </div>
+
+            <form id="loginForm" class="form active">
+              <h2>Iniciar Sesión</h2>
+              <input type="email" name="email" placeholder="Correo electrónico" required>
+              <input type="password" name="password" placeholder="Contraseña" required>
+              <button type="submit" class="btn">Entrar</button>
+            </form>
+
+            <form id="registerForm" class="form">
+              <h2>Crear Cuenta</h2>
+              <input type="text" name="nombre" placeholder="Nombre completo" required>
+              <input type="email" name="email" placeholder="Correo electrónico" required>
+              <input type="password" name="password" placeholder="Contraseña" required>
+              <button type="submit" class="btn">Registrarse</button>
+            </form>
+
+            <button id="googleLogin" class="btn btn-google">
+              <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" 
+                  style="width:20px;margin-right:8px;">
+              Continuar con Google
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔎 MODAL DE BÚSQUEDA -->
+      <div id="busqueda-modal" class="busqueda-modal">
+        <div class="busqueda-contenido">
+
+          <div class="container-input">
+            <input placeholder="BUSCAR..." type="text" name="text" class="input" id="inputBusqueda">
+            <!-- Ícono opcional -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="black" class="icono-buscar">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18.5a7.5 7.5 0 006.15-1.85z" />
+            </svg>
+          </div>
+
+          <button id="cerrarBusqueda" class="cerrar-busqueda">×</button>
+          <div id="resultadosBusqueda" class="resultados-busqueda"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- FORMULARIO AGREGAR PRODUCTO -->
+<div class="form-box">
+  <h1>Panel de Administrador</h1>
+  <h2>Agregar Producto</h2>
+  <form id="form-producto"> 
+      <input type="text" id="nombre" placeholder="Nombre del Producto" required>
+      
+      <textarea id="descripcion" placeholder="Descripción del Producto" rows="4" required></textarea>
+      
+      <input type="number" id="precio" placeholder="Precio (sin puntos ni comas)" required>
+      
+      <input type="number" id="stock" placeholder="Cantidad en Stock" required>
+      
+      <input type="text" id="imagen" placeholder="URL de la imagen (https://...)" required>
+      
+      <!-- ✅ Select de categoría -->
+      <select id="categoria" required>
+          <option value="">-- Selecciona una categoría --</option>
+          <option value="tecnologia">Tecnología</option>
+          <option value="relojes">Relojes</option>
+          <option value="bolsos">Bolsos y Carrieles</option>
+          <option value="ropa">Ropa</option>
+          <option value="oferta">Oferta</option>
+      </select>
+      
+      <button type="button" onclick="agregarProducto()">➕ Agregar Producto</button>
+  </form>
+</div>
+
+<!-- TABLA DE PRODUCTOS -->
+<div class="tabla-box">
+  <h2>Productos Registrados</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>categoría</th>
+        <th>Imagen</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-productos">
+    </tbody>
+  </table>
+</div>
+
+  <footer id="contacto">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>STRAPPED</h4>
+        <p>Tu marca de confianza en tecnología, accesorios y estilo urbano. Inspirada en el diseño moderno y la autenticidad.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>INFORMACIÓN</h4>
+        <ul>
+          <li><a href="about.html">Sobre Nosotros</a></li>
+          <li><a href="envios.html">Envíos y Devoluciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>SÍGUENOS</h4>
+        <ul class="iconos-footer">
+          <li><a href="https://www.instagram.com/strappedco.urban/"><img src="imagenes/Instagram.png" alt="Instagram"></a></li>
+          <li><a href="https://www.tiktok.com/@_strappedco_"><img src="imagenes/Tiktok.png" alt="TikTok"></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 STRAPPED. Todos los derechos reservados.</p>
+  </footer> 
+
+  <script src="admin.js"></script>
+  <script type="module" src="auth.js"></script>
+
+
+</body>
+</html>
