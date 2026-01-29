@@ -592,7 +592,7 @@ const PRODUCTOS = [
   },
   {
     id: 32,
-    nombre: "FLAMENGO",
+    nombre: "FLUMINENSE",
     precio: 45000,
     imgNormal: "imagenes/Flamengo.png",
     imgHover: "imagenes/Flamengo2.png",
@@ -661,3 +661,4 @@ function filtrarPorCategoria(categoria) {
 
 
 console.log(`✅ productos-data.js cargado: ${PRODUCTOS.length} productos disponibles`);
+
