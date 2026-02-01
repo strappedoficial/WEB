@@ -646,6 +646,158 @@ const PRODUCTOS = [
     ],
     categoria: "clubes",
     stock: 25
+  },
+  {
+    id: 35,
+    nombre: "ARGENTINA",
+    precio: 50000,
+    imgNormal: "imagenes/Argentina.png",
+    imgHover: "imagenes/Argentina2.png",
+    imagenes: [
+      "imagenes/Argentina.png",
+      "imagenes/Argentina2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "nacionalidades",
+    stock: 25
+  },
+  {
+    id: 36,
+    nombre: "FRANCIA",
+    precio: 50000,
+    imgNormal: "imagenes/Francia.png",
+    imgHover: "imagenes/Francia2.png",
+    imagenes: [
+      "imagenes/Francia.png",
+      "imagenes/Francia2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "clubes",
+    stock: 25
+  },
+  {
+    id: 37,
+    nombre: "MANCHESTER CITY RETRO",
+    precio: 50000,
+    imgNormal: "imagenes/City.png",
+    imgHover: "imagenes/City2.png",
+    imagenes: [
+      "imagenes/City.png",
+      "imagenes/City2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "clubes",
+    stock: 25
+  },
+  {
+    id: 38,
+    nombre: "PSG RETRO",
+    precio: 50000,
+    imgNormal: "imagenes/Psgantes.png",
+    imgHover: "imagenes/Psgantes2.png",
+    imagenes: [
+      "imagenes/Psgantes.png",
+      "imagenes/Psgantes2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "clubes",
+    stock: 25
+  },
+  {
+    id: 39,
+    nombre: "ALEMANIA",
+    precio: 45000,
+    imgNormal: "imagenes/Alemaniaantes.png",
+    imgHover: "imagenes/Alemaniaantes2.png",
+    imagenes: [
+      "imagenes/Alemaniaantes.png",
+      "imagenes/Alemaniaantes2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "clubes",
+    stock: 25
+  },
+  {
+    id: 40,
+    nombre: "JUVENTUS",
+    precio: 45000,
+    imgNormal: "imagenes/Juven.png",
+    imgHover: "imagenes/Juven2.png",
+    imagenes: [
+      "imagenes/Juven.png",
+      "imagenes/Juven2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "clubes",
+    stock: 25
+  },
+  {
+    id: 41,
+    nombre: "FLAMENGO",
+    precio: 45000,
+    imgNormal: "imagenes/Flamengoantes.png",
+    imgHover: "imagenes/Flamengoantes2.png",
+    imagenes: [
+      "imagenes/Flamengoantes.png",
+      "imagenes/Flamengoantes2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "nacionalidades",
+    stock: 25
+  },
+  {
+    id: 42,
+    nombre: "AC MILAN",
+    precio: 45000,
+    imgNormal: "imagenes/Milan.png",
+    imgHover: "imagenes/Milan2.png",
+    imagenes: [
+      "imagenes/Milan.png",
+      "imagenes/Milan2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "clubes",
+    stock: 25
   }
 ];
 
@@ -661,4 +813,5 @@ function filtrarPorCategoria(categoria) {
 
 
 console.log(`✅ productos-data.js cargado: ${PRODUCTOS.length} productos disponibles`);
+
 
