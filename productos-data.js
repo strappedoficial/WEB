@@ -798,6 +798,82 @@ const PRODUCTOS = [
     ],
     categoria: "clubes",
     stock: 25
+  },
+  {
+    id: 43,
+    nombre: "JAPÓN",
+    precio: 45000,
+    imgNormal: "Imagenes/Japon.png",
+    imgHover: "Imagenes/Japon2.png",
+    imagenes: [
+      "Imagenes/Japon.png",
+      "Imagenes/Japon2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "clubes",
+    stock: 25
+  },
+  {
+    id: 44,
+    nombre: "ARGENTINA",
+    precio: 45000,
+    imgNormal: "Imagenes/Argentina1986.png",
+    imgHover: "Imagenes/Argentina19862.png",
+    imagenes: [
+      "Imagenes/Argentina1986.png",
+      "Imagenes/Argentina19862.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "nacionalidades",
+    stock: 25
+  },
+  {
+    id: 45,
+    nombre: "NAPOLI",
+    precio: 45000,
+    imgNormal: "Imagenes/Napolicamu.png",
+    imgHover: "Imagenes/Napolicamu2.png",
+    imagenes: [
+      "Imagenes/Napolicamu.png",
+      "Imagenes/Napolicamu2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "clubes",
+    stock: 25
+  },
+  {
+    id: 46,
+    nombre: "MINEIRO",
+    precio: 45000,
+    imgNormal: "Imagenes/Atleticomineiro.png",
+    imgHover: "Imagenes/Atleticomineiro2.png",
+    imagenes: [
+      "Imagenes/Atleticomineiro.png",
+      "Imagenes/Atleticomineiro2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "clubes",
+    stock: 25
   }
 ];
 
@@ -813,5 +889,6 @@ function filtrarPorCategoria(categoria) {
 
 
 console.log(`✅ productos-data.js cargado: ${PRODUCTOS.length} productos disponibles`);
+
 
 
