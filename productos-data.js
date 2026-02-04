@@ -803,11 +803,11 @@ const PRODUCTOS = [
     id: 43,
     nombre: "JAPÓN",
     precio: 45000,
-    imgNormal: "Imagenes/Japon.png",
-    imgHover: "Imagenes/Japon2.png",
+    imgNormal: "imagenes/Japon.png",
+    imgHover: "imagenes/Japon2.png",
     imagenes: [
-      "Imagenes/Japon.png",
-      "Imagenes/Japon2.png"
+      "imagenes/Japon.png",
+      "imagenes/Japon2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -822,11 +822,11 @@ const PRODUCTOS = [
     id: 44,
     nombre: "ARGENTINA",
     precio: 45000,
-    imgNormal: "Imagenes/Argentina1986.png",
-    imgHover: "Imagenes/Argentina19862.png",
+    imgNormal: "imagenes/Argentina1986.png",
+    imgHover: "imagenes/Argentina19862.png",
     imagenes: [
-      "Imagenes/Argentina1986.png",
-      "Imagenes/Argentina19862.png"
+      "imagenes/Argentina1986.png",
+      "imagenes/Argentina19862.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -841,11 +841,11 @@ const PRODUCTOS = [
     id: 45,
     nombre: "NAPOLI",
     precio: 45000,
-    imgNormal: "Imagenes/Napolicamu.png",
-    imgHover: "Imagenes/Napolicamu2.png",
+    imgNormal: "imagenes/Napolicamu.png",
+    imgHover: "imagenes/Napolicamu2.png",
     imagenes: [
-      "Imagenes/Napolicamu.png",
-      "Imagenes/Napolicamu2.png"
+      "imagenes/Napolicamu.png",
+      "imagenes/Napolicamu2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -860,11 +860,11 @@ const PRODUCTOS = [
     id: 46,
     nombre: "MINEIRO",
     precio: 45000,
-    imgNormal: "Imagenes/Atleticomineiro.png",
-    imgHover: "Imagenes/Atleticomineiro2.png",
+    imgNormal: "imagenes/Atleticomineiro.png",
+    imgHover: "imagenes/Atleticomineiro2.png",
     imagenes: [
-      "Imagenes/Atleticomineiro.png",
-      "Imagenes/Atleticomineiro2.png"
+      "imagenes/Atleticomineiro.png",
+      "imagenes/Atleticomineiro2.png"
     ],
     descripcion: [
       "Diseño contemporáneo",
@@ -889,6 +889,7 @@ function filtrarPorCategoria(categoria) {
 
 
 console.log(`✅ productos-data.js cargado: ${PRODUCTOS.length} productos disponibles`);
+
 
 
 
