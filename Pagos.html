@@ -294,6 +294,21 @@
         <label>Ciudad</label>
         <input type="text" id="ciudad" placeholder="Ciudad" required>
 
+        <div style="margin: 25px 0; padding: 20px; background: #f8f8f8; border-radius: 8px;">
+          <label style="display: block; font-size: 16px; margin-bottom: 15px; font-weight: 600;">¿Deseas personalizar tus camisetas con estampado?</label>
+          <div style="display: flex; gap: 15px;">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+              <input type="radio" name="estampado" value="si" id="estampado-si" style="width: auto; margin: 0;">
+              <span>Sí, quiero estampado</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+              <input type="radio" name="estampado" value="no" id="estampado-no" checked style="width: auto; margin: 0;">
+              <span>No, sin estampado</span>
+            </label>
+          </div>
+          <p style="margin: 10px 0 0; font-size: 13px; color: #666;">Si eliges "Sí", podrás personalizar cada camiseta con nombre y número en la siguiente pantalla.</p>
+        </div>
+
         <button type="submit" id="btn-submit">Confirmar pedido</button>
       </form>
     </div>
@@ -315,7 +330,7 @@
 
   <script>
     // 🔥 URL DE GOOGLE APPS SCRIPT
-    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwKGfS7ClGrJwZ_Wa7EVJA7VD16FgIUFtkToPCqij4e9vRo1_ojTMefA0Ln2_myEEfC/exec';
+    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbyXdPA1QELZJkKCLsO9HtaE4A4teJnVJXe2WX4b9LfA4NIeM3PiiBQLW8DGf61a7zE7/exec';
 
     // === Cargar productos del carrito ===
     document.addEventListener('DOMContentLoaded', () => {
@@ -521,8 +536,39 @@
           // 4) Delay para asegurar que el pedido se envíe
           await new Promise(resolve => setTimeout(resolve, 1500));
 
-          // 5) Redirigir a confirmación
-          window.location.href = 'Confirmacion.html';
+          // 5) Verificar si quiere estampado
+          const quiereEstampado = document.querySelector('input[name="estampado"]:checked').value === 'si';
+
+          if (quiereEstampado) {
+            // Guardar pedido activo para personalización
+            const totalCamisetas = productosParaEnviar.reduce((total, item) => total + item.cantidad, 0);
+            
+            localStorage.setItem("pedido_activo", JSON.stringify({
+              numeroPedido: numeroPedido,
+              cantidad: totalCamisetas,
+              producto: "Camiseta personalizada",
+              cliente: datosCliente.nombre
+            }));
+
+            // REDIRIGE A PERSONALIZAR
+            window.location.href = "Personalizar.html";
+          } else {
+            // No quiere estampado, ir directo a confirmación
+            Swal.fire({
+              icon: 'success',
+              title: '¡Pedido confirmado!',
+              html: `
+                <p style="margin: 15px 0;">Tu pedido ha sido registrado correctamente.</p>
+                <p style="font-weight: 600; font-size: 18px; margin: 10px 0;">Número de pedido: #${numeroPedido}</p>
+                <p style="margin: 15px 0; color: #666;">Pronto nos pondremos en contacto contigo vía WhatsApp.</p>
+              `,
+              confirmButtonColor: '#040304',
+              confirmButtonText: 'Aceptar'
+            }).then(() => {
+              window.location.href = "index.html";
+            });
+          }
+
 
         } catch (errGlobal) {
           console.error("❌ Error en submit:", errGlobal);
@@ -542,5 +588,4 @@
   </script>
 
 </body>
-
 </html>
