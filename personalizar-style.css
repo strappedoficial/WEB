@@ -1,0 +1,512 @@
+/* ========================================
+   PERSONALIZACIÓN - STRAPPED STYLE
+   ======================================== */
+
+.customizer-section {
+  min-height: 100vh;
+  background: #f8f8f8;
+  padding: 120px 40px 60px;
+}
+
+/* ========== HEADER DEL PEDIDO ========== */
+.pedido-header {
+  max-width: 1400px;
+  margin: 0 auto 50px;
+  background: #040304;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+
+.pedido-header-content {
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.pedido-number {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pedido-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.6);
+  font-weight: 600;
+}
+
+.pedido-id {
+  font-size: 32px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.pedido-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pedido-details p {
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.pedido-details strong {
+  font-weight: 600;
+  opacity: 0.7;
+  margin-right: 8px;
+}
+
+/* ========== GRID PRINCIPAL ========== */
+.customizer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ========== SECCIÓN PREVIEW ========== */
+.preview-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 140px;
+}
+
+.preview-label {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #040304;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.shirt-preview-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  aspect-ratio: 1;
+}
+
+.shirt-base {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.shirt-overlay {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.shirt-text-name {
+  position: absolute;
+  top: 48%;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #1a3a6e;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.shirt-text-number {
+  position: absolute;
+  top: 58%;
+  font-size: 120px;
+  font-weight: 900;
+  color: #0b3b89;
+  text-align: center;
+  width: 100%;
+  line-height: 1;
+  text-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.preview-hint {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========== CONTROLES ========== */
+.controls-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 50px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.controls-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #040304;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.control-group {
+  margin-bottom: 30px;
+}
+
+.control-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #040304;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.control-input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #040304;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.control-input:focus {
+  outline: none;
+  border-color: #040304;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(4,3,4,0.08);
+}
+
+.control-input::placeholder {
+  color: #999;
+  font-weight: 500;
+}
+
+/* ========== SELECTOR DE TALLA ========== */
+.control-select {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #040304;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23040304' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  padding-right: 50px;
+}
+
+.control-select:focus {
+  outline: none;
+  border-color: #040304;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(4,3,4,0.08);
+}
+
+.control-select option {
+  padding: 10px;
+  font-weight: 600;
+}
+
+.control-select option:first-child {
+  color: #999;
+}
+
+.control-hint {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #888;
+  font-weight: 400;
+}
+
+/* ========== BOTONES ========== */
+.btn-save {
+  width: 100%;
+  padding: 18px 30px;
+  background: #040304;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-save:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(4,3,4,0.3);
+}
+
+.btn-save:active {
+  transform: translateY(0);
+}
+
+.btn-icon {
+  font-size: 18px;
+}
+
+.btn-finish {
+  width: 100%;
+  padding: 18px 30px;
+  background: #fff;
+  color: #040304;
+  border: 2px solid #040304;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.btn-finish:hover {
+  background: #040304;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(4,3,4,0.25);
+}
+
+.btn-finish:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ========== SECCIÓN GUARDADOS ========== */
+.saved-section {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.saved-title {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #040304;
+  margin-bottom: 20px;
+}
+
+.saved-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.saved-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #fafafa;
+  border-radius: 10px;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s ease;
+  gap: 15px;
+}
+
+.saved-item:hover {
+  background: #f5f5f5;
+  border-color: #d0d0d0;
+}
+
+.saved-item-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #040304;
+  letter-spacing: 1px;
+  flex: 1;
+}
+
+.saved-item-size {
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+  background: #e8e8e8;
+  padding: 6px 12px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+}
+
+.saved-item-number {
+  display: inline-block;
+  min-width: 30px;
+  height: 30px;
+  background: #040304;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saved-item-delete {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.saved-item-delete:hover {
+  color: #ff4444;
+  transform: scale(1.2);
+}
+
+.saved-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 1200px) {
+  .customizer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .preview-section {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .customizer-section {
+    padding: 100px 20px 40px;
+  }
+
+  .pedido-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 25px;
+    gap: 20px;
+  }
+
+  .pedido-id {
+    font-size: 24px;
+  }
+
+  .pedido-details p {
+    font-size: 13px;
+  }
+
+  .preview-section,
+  .controls-section {
+    padding: 30px 25px;
+  }
+
+  .controls-title {
+    font-size: 20px;
+  }
+
+  .shirt-text-name {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .shirt-text-number {
+    font-size: 80px;
+  }
+
+  .saved-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .saved-item-size {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .customizer-section {
+    padding: 90px 15px 30px;
+  }
+
+  .pedido-header-content {
+    padding: 20px;
+  }
+
+  .preview-section,
+  .controls-section {
+    padding: 25px 20px;
+  }
+
+  .shirt-text-name {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  }
+
+  .shirt-text-number {
+    font-size: 65px;
+  }
+
+  .btn-save,
+  .btn-finish {
+    padding: 16px 20px;
+    font-size: 13px;
+  }
+
+  .control-select {
+    font-size: 14px;
+  }
+}

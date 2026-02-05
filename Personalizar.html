@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Personaliza tu camiseta | STRAPPED</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="personalizar-style.css?v=2.0">
+</head>
+<body class="producto-page">
+
+<!-- HEADER -->
+<header class="header">
+  <div class="menu container">
+    <a href="index.html" class="logo">STRAPPED</a>
+    <ul class="iconos">
+      <li>
+        <a href="carrito.html" class="bolsa">
+          <img src="imagenes/bolsa.png" alt="Carrito">
+          <span id="contador-carrito">0</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- SECCIÓN DE PERSONALIZACIÓN -->
+<section class="customizer-section">
+  
+  <!-- Información del pedido -->
+  <div class="pedido-header">
+    <div class="pedido-header-content">
+      <div class="pedido-number">
+        <span class="pedido-label">PEDIDO</span>
+        <span class="pedido-id">#<span id="pedidoNumero"></span></span>
+      </div>
+      <div class="pedido-details">
+        <p><strong>Cliente:</strong> <span id="pedidoCliente"></span></p>
+        <p><strong>Camisetas a personalizar:</strong> <span id="pedidoCantidad"></span></p>
+        <p><strong>Personalizadas:</strong> <span id="cantidadGuardadas">0</span> / <span id="totalCamisetas"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid principal -->
+  <div class="customizer-container">
+    
+    <!-- PREVIEW DE LA CAMISETA -->
+    <div class="preview-section">
+      <div class="shirt-preview-container">
+        <img src="Imagenes/Personalizar.png" alt="Camiseta" class="shirt-base">
+        <div class="shirt-overlay">
+          <span id="shirt-name" class="shirt-text-name">NOMBRE</span>
+          <span id="shirt-number" class="shirt-text-number">00</span>
+        </div>
+      </div>
+      <p class="preview-hint">La vista previa muestra cómo se verá tu diseño en la parte trasera de la camiseta</p>
+    </div>
+
+    <!-- CONTROLES DE PERSONALIZACIÓN -->
+    <div class="controls-section">
+      <h2 class="controls-title">PERSONALIZA TU CAMISETA</h2>
+      
+      <div class="control-group">
+        <label class="control-label">NOMBRE DEL JUGADOR</label>
+        <input 
+          type="text" 
+          id="inputName" 
+          class="control-input" 
+          placeholder="Ej: RONALDO" 
+          maxlength="8">
+        <span class="control-hint">Máximo 08 caracteres</span>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">NÚMERO</label>
+        <input 
+          type="number" 
+          id="inputNumber" 
+          class="control-input" 
+          placeholder="00" 
+          min="0" 
+          max="99">
+        <span class="control-hint">Del 0 al 99</span>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">TALLA DEL UNIFORME</label>
+        <select id="inputTalla" class="control-select">
+          <option value="">Selecciona una talla</option>
+          <option value="S">S - Small</option>
+          <option value="M">M - Medium</option>
+          <option value="L">L - Large</option>
+          <option value="XL">XL - Extra Large</option>
+        </select>
+        <span class="control-hint">Tallas disponibles para adultos</span>
+      </div>
+
+      <button id="guardarBtn" class="btn-save">
+        <span class="btn-icon">✓</span>
+        GUARDAR CAMISETA
+      </button>
+
+      <!-- Lista de camisetas guardadas -->
+      <div class="saved-section" id="savedSection">
+        <h3 class="saved-title">ESTAMPADOS GUARDADOS</h3>
+        <div id="listaEstampados" class="saved-list">
+          <!-- Los items se añaden dinámicamente -->
+        </div>
+      </div>
+
+      <button id="finalizarBtn" class="btn-finish">
+        FINALIZAR PERSONALIZACIÓN
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<script src="Personalizar.js"></script>
+
+</body>
+</html>
