@@ -874,6 +874,82 @@ const PRODUCTOS = [
     ],
     categoria: "clubes",
     stock: 25
+  },
+  {
+    id: 47,
+    nombre: "FRANCIA",
+    precio: 45000,
+    imgNormal: "imagenes/Franciazidane.png",
+    imgHover: "imagenes/Franciazidane2.png",
+    imagenes: [
+      "imagenes/Franciazidane.png",
+      "imagenes/Franciazidane2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "clubes",
+    stock: 25
+  },
+  {
+    id: 48,
+    nombre: "RIVER PLATE",
+    precio: 45000,
+    imgNormal: "imagenes/Riverjapon.png",
+    imgHover: "imagenes/Riverjapon2.png",
+    imagenes: [
+      "imagenes/Riverjapon.png",
+      "imagenes/Riverjapon2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "nacionalidades",
+    stock: 25
+  },
+  {
+    id: 49,
+    nombre: "PALMEIRAS",
+    precio: 45000,
+    imgNormal: "imagenes/Palmeiras.png",
+    imgHover: "imagenes/Palmeiras2.png",
+    imagenes: [
+      "imagenes/Palmeiras.png",
+      "imagenes/Palmeiras2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "nacionalidades",
+    stock: 25
+  },
+  {
+    id: 49,
+    nombre: "BAYERN MUNICH",
+    precio: 45000,
+    imgNormal: "imagenes/Bayernmunich.png",
+    imgHover: "imagenes/Bayernmunich2.png",
+    imagenes: [
+      "imagenes/Bayernmunich.png",
+      "imagenes/Bayernmunich2.png"
+    ],
+    descripcion: [
+      "Diseño contemporáneo",
+      "Material premium",
+      "Tecnología Dri-FIT",
+      "Comodidad superior"
+    ],
+    categoria: "clubes",
+    stock: 25
   }
 ];
 
@@ -889,6 +965,7 @@ function filtrarPorCategoria(categoria) {
 
 
 console.log(`✅ productos-data.js cargado: ${PRODUCTOS.length} productos disponibles`);
+
 
 
 
