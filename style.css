@@ -192,29 +192,34 @@ main {
 }
 
 .menu {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 25px;
   width: 100%;
 }
 
-/* Ajusta la posiciÃ³n del logo al centro absoluto */
+/* Logo a la izquierda */
 .logo {
   position: static;
   transform: none;
-  margin-right: auto;
   font-size: 35px;
   font-weight: 1000;
   color: #fff;
   transition: color 0.3s ease, filter 0.3s ease;
+  flex-shrink: 0;
 }
 
+/* Botones centrados */
 .botones {
-  margin-left: 30px;
   display: flex;
   gap: 35px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+/* Iconos a la derecha */
 .iconos {
   margin-left: auto;
   display: flex;
@@ -1927,107 +1932,93 @@ section.ofertas {
   }
 }
 
+/* ========================================
+   🎨 BANNER RESPONSIVE - DOS IMÁGENES
+   ======================================== */
 
-/* =======================================================
-
-   ðŸ”¹ BANNER
-
-======================================================= */
-
-.banner video {
+/* 🖥️ BANNER PARA PC (por defecto, visible) */
+.banner-desktop {
+  display: block;
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  display: block;
+  object-position: center 35%; /* Movido hacia abajo para no cortar la cabeza */
 }
 
-.banner img {
-  width: 100%;
-  height: 130vh;  /* evita que una imagen sobrepase toda la pantalla vertical */
-  object-fit: cover;
-  display: block;
+/* 📱 BANNER PARA MÓVIL (oculto por defecto) */
+.banner-mobile {
+  display: none;
 }
 
-.boton-banner {
-  position: absolute;
-  top: 85%;                   /* Centrado vertical */
-  left: 49%;                  /* Centrado horizontal */
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  z-index: 10;                /* ðŸ”¥ Para quedar encima del video */
-}
+/* ========================================
+   📱 RESPONSIVE - TABLETS Y MÓVILES
+   ======================================== */
 
-.boton-banner h1 {
-  font-family: "Archivo Black";
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-}
-
-/* --- BOTÃ“N DEL BANNER --- */
-.banner-btn {
-  display: inline-block;
-  padding: 12px 28px;
-  border: 1px solid white;
-  color: white;
-  text-decoration: none;
-  font-size: 11px;
-  letter-spacing: 1px;
-  transition: 0.3s ease;
-}
-.banner img {
-  object-position: center center; /* estado normal */
-}
-.banner-btn:hover {
-  background-color: white;
-  color: black;
-}
-
-.banner2 img {
-  width: 100%;
-  height: 100vh;  /* evita que una imagen sobrepase toda la pantalla vertical */
-  object-fit: cover;
-  display: block;
-  margin-top: 0px;
-}
-
-.banner2 h1{
-  font-family: "Archivo Black";
-  color: white;
-  text-align: center;
-  font-size: 26px;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
+/* Tablets (pantallas medianas) */
+@media (max-width: 1024px) {
+  .banner-desktop {
+    display: none; /* Ocultar banner de PC */
+  }
   
+  .banner-mobile {
+    display: block; /* Mostrar banner de móvil */
+    width: 100%;
+    height: 70vh; /* Altura ajustada para tablets */
+    object-fit: cover;
+    object-position: center 35%; /* Movido hacia abajo para no cortar la cabeza */
+  }
 }
 
+/* Móviles (pantallas pequeñas) */
 @media (max-width: 768px) {
-  .banner img {
-    object-position: 15% center; /* mueve el foco horizontal */
+  .banner-mobile {
+    height: 60vh; /* Altura más pequeña para móviles */
+    object-position: center 30%; /* Ajustado para no cortar la cabeza */
   }
 }
 
-@media (max-width: 420px) {
-  .banner img {
-    object-position: 15% center; /* centro exacto */
+/* Móviles muy pequeños */
+@media (max-width: 480px) {
+  .banner-mobile {
+    height: 50vh; /* Altura aún más pequeña */
+    object-position: center 25%; /* Movido más abajo para no cortar la cabeza en móviles pequeños */
   }
 }
 
+/* ========================================
+   🎨 ALTERNATIVA: SI PREFIERES MISMO TAMAÑO
+   ======================================== */
 
-/* Forzar foco a la derecha en pantallas pequeÃ±as */
-@media (max-width: 768px) {
-  .banner2 img {
-    object-position: 85% right; /* muestra mÃ¡s la parte derecha de la imagen */
-  }
+/* Si quieres que ambas imágenes ocupen el mismo espacio,
+   comenta el código anterior y descomenta este: */
+
+/*
+.banner-desktop {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center center;
 }
 
-/* Si quieres aÃºn mÃ¡s a la derecha en mÃ³viles muy angostos */
-@media (max-width: 420px) {
-  .banner2 img {
-    object-position: 52% center;
+.banner-mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .banner-desktop {
+    display: none;
+  }
+  
+  .banner-mobile {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center center;
   }
 }
+*/
 
 /* =======================================================
 
@@ -3897,7 +3888,7 @@ ul.detalles li {
 
   .nosotros-image {
     height: 350px;
-    width: 400px;
+    width: 100%;
   }
 }
 
@@ -3921,7 +3912,7 @@ ul.detalles li {
   }
 
   .nosotros-container {
-    padding: 0;
+    padding: 0 20px;
   }
 
   .nosotros-block {
@@ -3964,7 +3955,8 @@ ul.detalles li {
   }
 
   .nosotros-image {
-    height: 250px;
+    height: 300px;
+    width: 100%;
   }
 
   .valores-grid {
@@ -4373,6 +4365,161 @@ ul.detalles li {
   }
 }
 
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f5f5;
+}
+
+.customizer {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* PREVIEW */
+.shirt-preview {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.shirt {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Nombre */
+#shirt-name {
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Número */
+#shirt-number {
+  position: absolute;
+  top: 140px;
+  width: 100%;
+  text-align: center;
+  font-size: 110px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* CONTROLES */
+.controls {
+  flex: 1;
+  background: #040304;
+  color: #fff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.controls h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.controls label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.controls input {
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.controls input:focus {
+  outline: none;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 16px;
+  background: #fff;
+  color: #040304;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .customizer {
+    flex-direction: column;
+  }
+
+  .controls {
+    padding: 40px 25px;
+  }
+}
+
+.customizer-advanced {
+  padding: 80px 60px;
+  background: #f5f5f5;
+}
+
+.pedido-info {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.customizer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.guardados ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.guardados li {
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.btn.dark {
+  background: #040304;
+  color: #fff;
+}
+
 /* ========================================
    🔴 CORRECCIÓN PARA UNA SOLA IMAGEN
    Agregar DESPUÉS de todas las demás reglas CSS
@@ -4490,4 +4637,3 @@ ul.detalles li {
   background-color: #95a5a6 !important;
   transform: none !important;
 }
-
