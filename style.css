@@ -4372,3 +4372,122 @@ ul.detalles li {
     font-size: 1rem;
   }
 }
+
+/* ========================================
+   🔴 CORRECCIÓN PARA UNA SOLA IMAGEN
+   Agregar DESPUÉS de todas las demás reglas CSS
+======================================== */
+
+/* ✅ SOBRESCRIBIR REGLAS ANTERIORES */
+.producto-img img:last-child {
+  position: relative !important;  /* Cambiar de absolute a relative */
+  opacity: 1 !important;          /* Siempre visible */
+}
+
+/* ✅ DESHABILITAR EFECTO HOVER DE CAMBIO DE IMAGEN */
+.catalog-product:hover .producto-img img:first-child,
+.producto-oferta:hover .producto-img img:first-child {
+  opacity: 1 !important;  /* Mantener visible */
+}
+
+.catalog-product:hover .producto-img img:last-child,
+.producto-oferta:hover .producto-img img:last-child {
+  opacity: 1 !important;  /* Mantener visible */
+}
+
+/* ✅ NUEVO EFECTO HOVER: ZOOM EN LUGAR DE CAMBIO DE IMAGEN */
+.catalog-product:hover .producto-img img,
+.producto-oferta:hover .producto-img img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ========================================
+   🔴 FRANJA DE AGOTADO
+======================================== */
+
+.producto-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.agotado-franja {
+  position: absolute;
+  top: 15px;
+  right: -35px;
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 5px 40px;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en la franja */
+.catalog-product:hover .agotado-franja,
+.producto-oferta:hover .agotado-franja {
+  background-color: #c0392b;
+}
+
+/* Opacidad en productos agotados */
+.catalog-product:has(.agotado-franja) .producto-img img,
+.producto-oferta:has(.agotado-franja) .producto-img img {
+  opacity: 0.6 !important;
+  filter: grayscale(30%);
+}
+
+.catalog-product:has(.agotado-franja):hover .producto-img img,
+.producto-oferta:has(.agotado-franja):hover .producto-img img {
+  opacity: 0.8 !important;
+}
+
+/* ========================================
+   🔴 FRANJA DE AGOTADO EN PÁGINA INDIVIDUAL
+======================================== */
+
+.galeria-carrusel {
+  position: relative;
+  overflow: hidden;
+}
+
+.galeria-carrusel .agotado-franja {
+  position: absolute;
+  top: 25px;
+  right: -35px;
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 8px 50px;
+  transform: rotate(45deg);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+/* Opacidad en carrusel cuando está agotado */
+.galeria-carrusel:has(.agotado-franja) .carrusel-img {
+  opacity: 0.65;
+  filter: grayscale(20%);
+}
+
+/* Botones deshabilitados cuando está agotado */
+.producto-info.agotado .btn,
+.producto-info.agotado .btn-secundario {
+  background-color: #95a5a6 !important;
+  cursor: not-allowed !important;
+  opacity: 0.6;
+}
+
+.producto-info.agotado .btn:hover,
+.producto-info.agotado .btn-secundario:hover {
+  background-color: #95a5a6 !important;
+  transform: none !important;
+}
+
