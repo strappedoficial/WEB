@@ -132,7 +132,8 @@ const PRODUCTOS = [
       "Comodidad superior"
     ],
     categoria: "clubes",
-    stock: 25
+    stock: 25,
+    masVendido: true
   },
   {
     id: 8,
@@ -531,7 +532,8 @@ const PRODUCTOS = [
       "Comodidad superior"
     ],
     categoria: "clubes",
-    stock: 25
+    stock: 25,
+    masVendido: true
   },
   {
     id: 29,
@@ -626,7 +628,8 @@ const PRODUCTOS = [
       "Comodidad superior"
     ],
     categoria: "clubes",
-    stock: 25
+    stock: 25,
+    masVendido: true
   },
   {
     id: 34,
@@ -759,7 +762,8 @@ const PRODUCTOS = [
       "Comodidad superior"
     ],
     categoria: "clubes",
-    stock: 25
+    stock: 25,
+    masVendido: true
   },
   {
     id: 41,
@@ -965,6 +969,7 @@ function filtrarPorCategoria(categoria) {
 
 
 console.log(`✅ productos-data.js cargado: ${PRODUCTOS.length} productos disponibles`);
+
 
 
 
