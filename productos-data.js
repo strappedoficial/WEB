@@ -664,7 +664,7 @@ const PRODUCTOS = [
       "Comodidad superior"
     ],
     categoria: "nacionalidades",
-    stock: 25
+    stock: 0
   },
   {
     id: 36,
@@ -683,7 +683,7 @@ const PRODUCTOS = [
       "Comodidad superior"
     ],
     categoria: "clubes",
-    stock: 25
+    stock: 0
   },
   {
     id: 37,
@@ -702,7 +702,7 @@ const PRODUCTOS = [
       "Comodidad superior"
     ],
     categoria: "clubes",
-    stock: 25
+    stock: 0
   },
   {
     id: 38,
@@ -721,7 +721,7 @@ const PRODUCTOS = [
       "Comodidad superior"
     ],
     categoria: "clubes",
-    stock: 25
+    stock: 0
   },
   {
     id: 39,
@@ -740,7 +740,7 @@ const PRODUCTOS = [
       "Comodidad superior"
     ],
     categoria: "clubes",
-    stock: 25
+    stock: 0
   },
   {
     id: 40,
@@ -835,7 +835,7 @@ const PRODUCTOS = [
       "Comodidad superior"
     ],
     categoria: "nacionalidades",
-    stock: 25
+    stock: 0
   },
   {
     id: 45,
@@ -854,7 +854,7 @@ const PRODUCTOS = [
       "Comodidad superior"
     ],
     categoria: "clubes",
-    stock: 25
+    stock: 0
   },
   {
     id: 46,
@@ -965,6 +965,7 @@ function filtrarPorCategoria(categoria) {
 
 
 console.log(`✅ productos-data.js cargado: ${PRODUCTOS.length} productos disponibles`);
+
 
 
 
