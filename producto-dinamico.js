@@ -51,6 +51,31 @@ document.addEventListener("DOMContentLoaded", () => {
     pista.appendChild(img);
   });
 
+  // 🔴 MOSTRAR FRANJA DE AGOTADO SI stock === 0
+  if (producto.stock === 0) {
+    const galeria = document.querySelector(".galeria-carrusel");
+    const franja = document.createElement("div");
+    franja.className = "agotado-franja";
+    franja.textContent = "AGOTADO";
+    galeria.appendChild(franja);
+
+    // Deshabilitar botones
+    const productoInfo = document.querySelector(".producto-info");
+    productoInfo.classList.add("agotado");
+    
+    const btnAgregar = document.getElementById("btn-agregar-carrito");
+    const btnComprar = document.getElementById("btn-comprar-ahora");
+    
+    btnAgregar.disabled = true;
+    btnComprar.disabled = true;
+    btnAgregar.style.cursor = "not-allowed";
+    btnComprar.style.cursor = "not-allowed";
+    
+    // Cambiar texto del botón
+    btnAgregar.innerHTML = "❌ Producto Agotado";
+    btnComprar.innerHTML = "❌ No Disponible";
+  }
+
   // 🎯 SISTEMA DE CARRUSEL CON FLECHAS
   let indiceActual = 0;
   const totalImagenes = producto.imagenes.length;
@@ -78,6 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   botonesCantidad.forEach(btn => {
     btn.addEventListener("click", () => {
+      if (producto.stock === 0) return; // No permitir cambios si está agotado
+      
       const cantidadActual = parseInt(inputCantidad.value) || 1;
       if (btn.textContent === "+") {
         inputCantidad.value = cantidadActual + 1;
@@ -89,6 +116,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Prevenir valores inválidos en el input
   inputCantidad.addEventListener("change", () => {
+    if (producto.stock === 0) {
+      inputCantidad.value = 0;
+      return;
+    }
     const valor = parseInt(inputCantidad.value) || 1;
     inputCantidad.value = Math.max(1, valor);
   });
@@ -97,6 +128,15 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .getElementById("btn-agregar-carrito")
     .addEventListener("click", () => {
+      if (producto.stock === 0) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Producto Agotado',
+          text: 'Este producto no está disponible actualmente',
+          confirmButtonColor: '#e74c3c'
+        });
+        return;
+      }
       const cantidad = parseInt(inputCantidad.value) || 1;
       agregarAlCarrito(producto.id, cantidad);
     });
@@ -106,6 +146,17 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnComprarAhora) {
     btnComprarAhora.addEventListener("click", (e) => {
       e.preventDefault();
+      
+      if (producto.stock === 0) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Producto Agotado',
+          text: 'Este producto no está disponible actualmente',
+          confirmButtonColor: '#e74c3c'
+        });
+        return;
+      }
+      
       const cantidad = parseInt(inputCantidad.value) || 1;
       
       console.log('🛒 Compra directa - Producto:', producto.nombre, 'Cantidad:', cantidad);
