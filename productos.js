@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <a href="producto.html?id=${p.id}" class="catalog-product">
       <div class="producto-img">
         <img src="${p.imgNormal}">
-        <img src="${p.imgHover}">
+        ${p.stock === 0 ? '<div class="agotado-franja">AGOTADO</div>' : ''}
       </div>
       <h3>${p.nombre}</h3>
       <p class="precio-oferta">
