@@ -21,7 +21,7 @@ body {
 
       <input type="checkbox" id="menu" style="display:none;">
       <label for="menu" id="btnMenuUndergold" class="icono" aria-label="Abrir menú">
-        <img src="imagenes/Icono.png" alt="icono">
+        <img src="Imagenes/Icono.png" alt="icono">
       </label>
       
       <div id="botones-panel" class="botones-panel">
@@ -31,9 +31,6 @@ body {
             <li><a href="Catalogo.html">CATÁLOGO</a></li>
             <li><a href="#sale">SALE</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
-            <li class="login-mobile">
-              <a href="#" id="loginBtn">Iniciar Sesión / Registrarse</a>
-            </li>
         </ul>
       </div>
 
@@ -114,12 +111,6 @@ body {
       </ul>
 
       <ul class="iconos">
-        <li><a href="#"><img src="imagenes/Lupa.png" alt="Buscar"></a></li>
-        <li id="panel-usuario" class="panel-usuario">
-          <button class="usuario-btn" aria-label="Abrir usuario" type="button">
-            <img src="imagenes/User.png" class="icono-user" alt="Usuario">
-          </button>
-        </li>
         <li style="position: relative;">
           <button id="btn-carrito" class="car-icon" type="button" aria-label="Abrir Carrito">
               <img src="imagenes/Bolsa.png" alt="Carrito">
@@ -143,14 +134,16 @@ body {
           <button id="carrito-comprar" class="btn">Pagar pedido</button>
         </div>
       </div>
+
       <!-- Fondo oscuro al abrir -->
       <div id="overlay-carrito" class="overlay-carrito"></div>
     </div>
   </header>
 
-  <section id="inicio" class="banner">
-    <img src="imagenes/STRAPPED®.png" alt="Banner principal"><br>
-  </section>
+<section id="inicio" class="banner">
+  <img src="imagenes/STRAPPED®.png" alt="Banner STRAPPED" class="banner-desktop">
+  <img src="imagenes/STRAPPED-mobile.png" alt="Banner STRAPPED" class="banner-mobile"><br><br>
+</section>
 
   <main class="main-container">
     <section id="catalogo" class="section-productos">
@@ -334,4 +327,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </body>
 </html>
-
