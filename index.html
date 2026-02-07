@@ -21,7 +21,7 @@ body {
 
       <input type="checkbox" id="menu" style="display:none;">
       <label for="menu" id="btnMenuUndergold" class="icono" aria-label="Abrir menú">
-        <img src="Imagenes/Icono.png" alt="icono">
+        <img src="imagenes/Icono.png" alt="icono">
       </label>
       
       <div id="botones-panel" class="botones-panel">
@@ -122,7 +122,7 @@ body {
         </li>
         <li style="position: relative;">
           <button id="btn-carrito" class="car-icon" type="button" aria-label="Abrir Carrito">
-              <img src="Imagenes/Bolsa.png" alt="Carrito">
+              <img src="imagenes/Bolsa.png" alt="Carrito">
               <span id="carrito-contador" class="contador-carrito">0</span>
           </button>
         </li>
@@ -143,58 +143,8 @@ body {
           <button id="carrito-comprar" class="btn">Pagar pedido</button>
         </div>
       </div>
-
       <!-- Fondo oscuro al abrir -->
       <div id="overlay-carrito" class="overlay-carrito"></div>
-
-      <!-- MODAL LOGIN -->
-      <div id="authModal" class="modal">
-        <div class="modal-content">
-          <span class="close-btn" id="closeModal">&times;</span>
-
-          <div class="form-container">
-            <div class="form-toggle">
-              <button id="loginToggle" class="active">Iniciar Sesión</button>
-              <button id="registerToggle">Registrarse</button>
-            </div>
-
-            <form id="loginForm" class="form active">
-              <h2>Iniciar Sesión</h2>
-              <input type="email" name="email" placeholder="Correo electrónico" required>
-              <input type="password" name="password" placeholder="Contraseña" required>
-              <button type="submit" class="btn">Entrar</button>
-            </form>
-
-            <form id="registerForm" class="form">
-              <h2>Crear Cuenta</h2>
-              <input type="text" name="nombre" placeholder="Nombre completo" required>
-              <input type="email" name="email" placeholder="Correo electrónico" required>
-              <input type="password" name="password" placeholder="Contraseña" required>
-              <button type="submit" class="btn">Registrarse</button>
-            </form>
-
-            <button id="googleLogin" class="btn btn-google">
-              <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" 
-                  style="width:20px;margin-right:8px;">
-              Continuar con Google
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 🔎 MODAL DE BÚSQUEDA -->
-      <div id="busqueda-modal" class="busqueda-modal">
-        <div class="busqueda-contenido">
-          <div class="container-input">
-            <input placeholder="BUSCAR..." type="text" name="text" class="input" id="inputBusqueda">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="black" class="icono-buscar">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18.5a7.5 7.5 0 006.15-1.85z" />
-            </svg>
-          </div>
-          <button id="cerrarBusqueda" class="cerrar-busqueda">×</button>
-          <div id="resultadosBusqueda" class="resultados-busqueda"></div>
-        </div>
-      </div>
     </div>
   </header>
 
@@ -384,3 +334,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </body>
 </html>
+
