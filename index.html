@@ -21,7 +21,7 @@ body {
 
       <input type="checkbox" id="menu" style="display:none;">
       <label for="menu" id="btnMenuUndergold" class="icono" aria-label="Abrir menú">
-        <img src="imagenes/Icono.png" alt="icono">
+        <img src="Imagenes/Icono.png" alt="icono">
       </label>
       
       <div id="botones-panel" class="botones-panel">
@@ -98,10 +98,10 @@ body {
                 <div class="contenedor">
                   <div class="col">
                     <h4>SÍGUENOS</h4>
-                    <a href="https://www.instagram.com/strappedco.urban/" target="_blank">
+                    <a href="https://www.instagram.com/strapped.oficial/" target="_blank">
                       📷 Instagram
                     </a>
-                    <a href="https://www.tiktok.com/@_strappedco_" target="_blank">
+                    <a href="https://www.tiktok.com/@strapped.oficial" target="_blank">
                       🎵 TikTok
                     </a>
                     <a href="https://wa.me/573237830141" target="_blank">
@@ -122,7 +122,7 @@ body {
         </li>
         <li style="position: relative;">
           <button id="btn-carrito" class="car-icon" type="button" aria-label="Abrir Carrito">
-              <img src="imagenes/Bolsa.png" alt="Carrito">
+              <img src="Imagenes/Bolsa.png" alt="Carrito">
               <span id="carrito-contador" class="contador-carrito">0</span>
           </button>
         </li>
@@ -223,55 +223,21 @@ body {
       </div>
     </section>
 
+<!-- ========================================
+     🔴 SECCIÓN DE OFERTAS / MÁS VENDIDOS
+     Esta sección se carga automáticamente desde productos-data.js
+     ======================================== -->
+
     <section class="ofertas">
       <h2 class="ofertas-titulo">DESCUBRE LO MÁS VENDIDO</h2>
 
+      <!-- ✅ Este contenedor se llenará automáticamente con JavaScript -->
       <div class="ofertas-grid" id="productos-ofertas">
-        <div>
-          <a href="producto.html?id=1" class="producto-oferta">
-            <div class="producto-img">
-              <img src="imagenes/Corinthians.png" alt="img-normal">
-              <img src="imagenes/Corinthians2.png" alt="img-hover">
-            </div>
-            <h3>Corinthians</h3>
-            <p class="precio-oferta">$45.000,00 COP</p>
-          </a>
-        </div>
-        <div>
-          <a href="producto.html?id=2" class="producto-oferta">
-            <div class="producto-img">
-              <img src="imagenes/Liverpool.png" alt="img-normal">
-              <img src="imagenes/Liverpool2.png" alt="img-hover">
-            </div>
-            <h3>Liverpool</h3>
-            <p class="precio-oferta">$45.000,00 COP</p>
-          </a>
-        </div>
-        <div>
-          <a href="producto.html?id=3" class="producto-oferta">
-            <div class="producto-img">
-              <img src="imagenes/Alemania.png" alt="img-normal">
-              <img src="imagenes/Alemania2.png" alt="img-hover">
-            </div>
-            <h3>Alemania</h3>
-            <p class="precio-oferta">$45.000,00 COP</p>
-          </a>
-        </div>
-        <div>
-          <a href="producto.html?id=4" class="producto-oferta">
-            <div class="producto-img">
-              <img src="imagenes/Manchestercity.png" alt="img-normal">
-              <img src="imagenes/Manchestercity2.png" alt="img-hover">
-            </div>
-            <h3>Manchester City</h3>
-            <p class="precio-oferta">$45.000,00 COP</p>
-          </a>
-        </div>
+        <!-- Los productos se cargarán aquí automáticamente -->
       </div>
     </section>
-  </main>
-
   <!-- ========== SECCIÓN NOSOTROS ========== -->
+
   <section id="nosotros" class="nosotros-section">
 
     <div class="nosotros-container">
@@ -344,6 +310,9 @@ body {
   
   <!-- 4. Productos (requiere PRODUCTOS) -->
   <script src="productos.js"></script>
+
+  <!-- 5. Carga de productos más vendidos en el INDEX -->
+  <script src="index-productos.js"></script>
   
   <!-- 5. Auth (módulo) -->
   <script type="module" src="auth.js?v=20251125"></script>
@@ -414,8 +383,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 </body>
-
 </html>
-
-
-
